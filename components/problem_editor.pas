@@ -82,6 +82,7 @@ type
     procedure SaveControls(Problem: TProblem);
     procedure InvalidateControls;
     property InputOutputIntroduction: TStrings read GetInputOutputIntroduction;
+    function Introduction: String;
   end;
 
 implementation
@@ -294,6 +295,11 @@ begin
   PublicTestCaseEdit.Enabled:=RadioButton3.Checked;
   InputStreamEdit.Enabled:=not StandardStreamCheck.Checked;
   OutputStreamEdit.Enabled:=not StandardStreamCheck.Checked;
+end;
+
+function TProblemEditor.Introduction: String;
+begin
+  Result := 'ProblemEditor introduction';
 end;
 
 end.

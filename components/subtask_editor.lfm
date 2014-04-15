@@ -3,6 +3,7 @@ object SubtaskEditor: TSubtaskEditor
   Height = 360
   Top = 386
   Width = 480
+  ActiveControl = StringGrid1
   Caption = 'SubtaskEditor'
   ChildSizing.TopBottomSpacing = 5
   ChildSizing.VerticalSpacing = 5
@@ -48,7 +49,7 @@ object SubtaskEditor: TSubtaskEditor
     Top = 5
     Width = 480
     Align = alTop
-    Caption = 'SubtaskEnabledCheck'
+    Caption = 'Dùng subtask'
     TabOrder = 1
   end
   object ButtonPanel1: TButtonPanel

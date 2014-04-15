@@ -908,7 +908,7 @@ msgid "SubtaskEditor"
 msgstr ""
 
 #: tsubtaskeditor.subtaskenabledcheck.caption
-msgid "SubtaskEnabledCheck"
+msgid "Dùng subtask"
 msgstr ""
 
 #: ttimeeditor.button1.caption
