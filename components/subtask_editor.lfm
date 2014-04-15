@@ -1,0 +1,70 @@
+object SubtaskEditor: TSubtaskEditor
+  Left = 798
+  Height = 360
+  Top = 386
+  Width = 480
+  Caption = 'SubtaskEditor'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 360
+  ClientWidth = 480
+  LCLVersion = '1.2.0.3'
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 277
+    Top = 34
+    Width = 480
+    Align = alClient
+    AutoFillColumns = True
+    ColCount = 4
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAutoAddRows, goSmoothScroll]
+    TabOrder = 0
+    TitleStyle = tsNative
+    ColWidths = (
+      64
+      138
+      138
+      138
+    )
+    Cells = (
+      4
+      0
+      0
+      '#'
+      1
+      0
+      'Bắt đầu'
+      2
+      0
+      'Kết thúc'
+      3
+      0
+      'Điểm'
+    )
+  end
+  object SubtaskEnabledCheck: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 5
+    Width = 480
+    Align = alTop
+    Caption = 'SubtaskEnabledCheck'
+    TabOrder = 1
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 37
+    Top = 317
+    Width = 468
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 2
+    ShowButtons = [pbOK, pbCancel]
+  end
+end

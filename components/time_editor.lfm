@@ -1,0 +1,155 @@
+object TimeEditor: TTimeEditor
+  Left = 798
+  Height = 360
+  Top = 410
+  Width = 480
+  Caption = 'TimeEditor'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 360
+  ClientWidth = 480
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object StartTimeSetCheck: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 5
+    Width = 480
+    Align = alTop
+    Caption = 'Quy định thời gian'
+    OnChange = StartTimeSetCheckChange
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 277
+    Top = 34
+    Width = 224
+    Align = alLeft
+    Caption = 'Ngày tổ chức'
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.VerticalSpacing = 5
+    ClientHeight = 257
+    ClientWidth = 220
+    TabOrder = 1
+    object Calendar1: TCalendar
+      Left = 0
+      Height = 210
+      Top = 5
+      Width = 220
+      Align = alClient
+      DateTime = 41757
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 0
+      Height = 32
+      Top = 220
+      Width = 220
+      Align = alBottom
+      Caption = 'Tổ chức hôm nay'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 224
+    Height = 277
+    Top = 34
+    Width = 5
+  end
+  object GroupBox2: TGroupBox
+    Left = 229
+    Height = 277
+    Top = 34
+    Width = 251
+    Align = alClient
+    Caption = 'Thời gian'
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.VerticalSpacing = 5
+    ClientHeight = 257
+    ClientWidth = 247
+    TabOrder = 3
+    object HourLabel: TLabel
+      Left = 0
+      Height = 18
+      Top = 5
+      Width = 247
+      Align = alTop
+      Caption = 'Giờ'
+      ParentColor = False
+    end
+    object MinuteLabel: TLabel
+      Left = 0
+      Height = 18
+      Top = 61
+      Width = 247
+      Align = alTop
+      Caption = 'Phút'
+      ParentColor = False
+    end
+    object HourEdit: TSpinEdit
+      Left = 0
+      Height = 28
+      Top = 28
+      Width = 247
+      Align = alTop
+      MaxValue = 23
+      TabOrder = 0
+    end
+    object MinuteEdit: TSpinEdit
+      Left = 0
+      Height = 28
+      Top = 84
+      Width = 247
+      Align = alTop
+      MaxValue = 59
+      TabOrder = 1
+    end
+    object DurationLabel: TLabel
+      Left = 0
+      Height = 18
+      Top = 117
+      Width = 247
+      Align = alTop
+      Caption = 'Thời lượng (phút)'
+      ParentColor = False
+    end
+    object DurationEdit: TSpinEdit
+      Left = 0
+      Height = 28
+      Top = 140
+      Width = 247
+      Align = alTop
+      Increment = 15
+      MaxValue = 999999999
+      TabOrder = 2
+    end
+    object Button2: TButton
+      Left = 0
+      Height = 32
+      Top = 220
+      Width = 247
+      Align = alBottom
+      Caption = 'Bắt đầu vào giờ, phút này'
+      OnClick = Button2Click
+      TabOrder = 3
+    end
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 37
+    Top = 317
+    Width = 468
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 4
+    ShowButtons = [pbOK, pbCancel]
+  end
+end

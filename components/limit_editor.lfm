@@ -1,0 +1,113 @@
+object LimitEditor: TLimitEditor
+  Left = 878
+  Height = 300
+  Top = 470
+  Width = 400
+  Caption = 'LimitEditor'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 300
+  ClientWidth = 400
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object MSNEdit: TSpinEdit
+    Left = 0
+    Height = 28
+    Top = 34
+    Width = 400
+    Align = alTop
+    MaxValue = 999999999
+    TabOrder = 1
+  end
+  object MUTNEdit: TSpinEdit
+    Left = 0
+    Height = 28
+    Top = 96
+    Width = 400
+    Align = alTop
+    MaxValue = 999999999
+    TabOrder = 3
+  end
+  object MSIEdit: TSpinEdit
+    Left = 0
+    Height = 28
+    Top = 158
+    Width = 400
+    Align = alTop
+    MaxValue = 999999999
+    TabOrder = 5
+  end
+  object MUTIEdit: TSpinEdit
+    Left = 0
+    Height = 28
+    Top = 220
+    Width = 400
+    Align = alTop
+    MaxValue = 999999999
+    TabOrder = 7
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 37
+    Top = 257
+    Width = 388
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 8
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object MSNLabel: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 5
+    Width = 400
+    Align = alTop
+    Caption = 'MSNLabel'
+    Color = clDefault
+    OnChange = MSNLabelChange
+    ParentColor = False
+    TabOrder = 0
+  end
+  object MUTNLabel: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 67
+    Width = 400
+    Align = alTop
+    Caption = 'MUTNLabel'
+    Color = clDefault
+    OnChange = MSNLabelChange
+    ParentColor = False
+    TabOrder = 2
+  end
+  object MSILabel: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 129
+    Width = 400
+    Align = alTop
+    Caption = 'MSILabel'
+    Color = clDefault
+    OnChange = MSNLabelChange
+    ParentColor = False
+    TabOrder = 4
+  end
+  object MUTILabel: TCheckBox
+    Left = 0
+    Height = 24
+    Top = 191
+    Width = 400
+    Align = alTop
+    Caption = 'MUTILabel'
+    Color = clDefault
+    OnChange = MSNLabelChange
+    ParentColor = False
+    TabOrder = 6
+  end
+end

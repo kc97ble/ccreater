@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="ccreater"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="LazControls"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="21">
+      <Unit0>
+        <Filename Value="ccreater.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ccreater"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="components/problem_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProblemEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="problem_editor"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="components/utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="utils"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="components/test_filter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="test_filter"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="components/edit_user_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EditUserForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="edit_user_form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="components/token_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TokenEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="token_editor"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="components/limit_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LimitEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="limit_editor"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="components/multi_update.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="multi_update"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="components/time_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimeEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="time_editor"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="components/user_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="user_database"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="components/token_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="token_database"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="components/limit_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="limit_database"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="components/problem_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="problem_database"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="components/basic_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="basic_database"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="components/contest_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="contest_database"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="components/database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="database"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="components/add_problem_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AddProblemForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="add_problem_form"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="components/mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ContestEditorForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mainform"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="components/properties_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PropertiesEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="properties_editor"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="components/subtask_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="subtask_database"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="components/subtask_editor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SubtaskEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="subtask_editor"/>
+      </Unit20>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="ccreater"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="components"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

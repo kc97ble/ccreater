@@ -1,0 +1,404 @@
+object ProblemEditor: TProblemEditor
+  Left = 798
+  Height = 360
+  Top = 386
+  Width = 480
+  Caption = 'ProblemEditor'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 360
+  ClientWidth = 480
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 306
+    Top = 5
+    Width = 480
+    ActivePage = TabSheet3
+    Align = alClient
+    TabIndex = 2
+    TabOrder = 0
+    object TabSheet2: TTabSheet
+      Caption = 'Tổng quan'
+      ChildSizing.TopBottomSpacing = 5
+      ClientHeight = 274
+      ClientWidth = 476
+      object NameEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 23
+        Width = 476
+        Align = alTop
+        OnChange = NameEditChange
+        TabOrder = 0
+        Text = 'NameEdit'
+      end
+      object NameLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 5
+        Width = 476
+        Align = alTop
+        Caption = 'Mã bài tập'
+        ParentColor = False
+      end
+      object TitleLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 51
+        Width = 476
+        Align = alTop
+        Caption = 'Tên bài tập'
+        ParentColor = False
+      end
+      object TitleEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 69
+        Width = 476
+        Align = alTop
+        OnChange = NameEditChange
+        TabOrder = 1
+        Text = 'TitleEdit'
+      end
+      object TimeLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 97
+        Width = 476
+        Align = alTop
+        Caption = 'Thời gian chạy'
+        ParentColor = False
+      end
+      object MemLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 143
+        Width = 476
+        Align = alTop
+        Caption = 'Bộ nhớ'
+        ParentColor = False
+      end
+      object MemEdit: TSpinEdit
+        Left = 0
+        Height = 28
+        Top = 161
+        Width = 476
+        Align = alTop
+        Increment = 64
+        MaxValue = 12345
+        TabOrder = 3
+      end
+      object StatementLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 189
+        Width = 476
+        Align = alTop
+        Caption = 'Đề bài'
+        ParentColor = False
+      end
+      object StatementEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 207
+        Width = 476
+        Align = alTop
+        TabOrder = 4
+        Text = 'StatementEdit'
+      end
+      object TimeEdit: TSpinEdit
+        Left = 0
+        Height = 28
+        Top = 115
+        Width = 476
+        Align = alTop
+        MaxValue = 12345
+        TabOrder = 2
+      end
+      object StatementButton: TButton
+        AnchorSideTop.Control = StatementEdit
+        AnchorSideRight.Control = StatementEdit
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = StatementEdit
+        AnchorSideBottom.Side = asrBottom
+        Left = 454
+        Height = 28
+        Top = 207
+        Width = 22
+        Anchors = [akTop, akRight, akBottom]
+        Caption = '...'
+        OnClick = StatementButtonClick
+        TabOrder = 5
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Input và output'
+      ChildSizing.TopBottomSpacing = 5
+      ChildSizing.VerticalSpacing = 5
+      ClientHeight = 274
+      ClientWidth = 476
+      object ListBox1: TListBox
+        Left = 0
+        Height = 227
+        Top = 5
+        Width = 476
+        Align = alClient
+        ItemHeight = 0
+        MultiSelect = True
+        ScrollWidth = 474
+        TabOrder = 0
+        TopIndex = -1
+      end
+      object Panel2: TPanel
+        Left = 0
+        Height = 32
+        Top = 237
+        Width = 476
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 32
+        ClientWidth = 476
+        TabOrder = 1
+        object Button2: TButton
+          Left = 75
+          Height = 32
+          Top = 0
+          Width = 75
+          Action = actRem
+          Align = alLeft
+          TabOrder = 1
+        end
+        object Button1: TButton
+          Left = 0
+          Height = 32
+          Top = 0
+          Width = 75
+          Action = actAdd
+          Align = alLeft
+          TabOrder = 0
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Nâng cao'
+      ChildSizing.TopBottomSpacing = 5
+      ChildSizing.VerticalSpacing = 5
+      ClientHeight = 274
+      ClientWidth = 476
+      object LimitLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 5
+        Width = 476
+        Align = alTop
+        BorderSpacing.Bottom = 14
+        Caption = 'LimitLabel'
+        ParentColor = False
+      end
+      object TokenLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 37
+        Width = 476
+        Align = alTop
+        BorderSpacing.Bottom = 14
+        Caption = 'TokenLabel'
+        ParentColor = False
+      end
+      object LimitButton: TButton
+        AnchorSideTop.Control = LimitLabel
+        AnchorSideRight.Control = LimitLabel
+        AnchorSideRight.Side = asrBottom
+        Left = 326
+        Height = 32
+        Top = 5
+        Width = 150
+        Action = actEditLimit
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+      end
+      object TokenButton: TButton
+        AnchorSideTop.Control = TokenLabel
+        AnchorSideRight.Control = TokenLabel
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TokenLabel
+        AnchorSideBottom.Side = asrBottom
+        Left = 326
+        Height = 32
+        Top = 37
+        Width = 150
+        Action = actEditToken
+        Anchors = [akTop, akRight]
+        TabOrder = 1
+      end
+      object GroupBox1: TGroupBox
+        Left = 222
+        Height = 168
+        Top = 101
+        Width = 254
+        Align = alClient
+        Caption = 'Danh sách test được công khai'
+        ChildSizing.TopBottomSpacing = 5
+        ChildSizing.VerticalSpacing = 5
+        ClientHeight = 148
+        ClientWidth = 250
+        TabOrder = 2
+        object RadioButton1: TRadioButton
+          Left = 0
+          Height = 24
+          Top = 5
+          Width = 250
+          Align = alTop
+          Caption = 'Nhìn thấy hết'
+          Checked = True
+          OnChange = NameEditChange
+          TabOrder = 0
+          TabStop = True
+        end
+        object RadioButton2: TRadioButton
+          Left = 0
+          Height = 24
+          Top = 34
+          Width = 250
+          Align = alTop
+          Caption = 'Ẩn hết'
+          OnChange = NameEditChange
+          TabOrder = 1
+        end
+        object RadioButton3: TRadioButton
+          Left = 0
+          Height = 24
+          Top = 63
+          Width = 250
+          Align = alTop
+          Caption = 'Dùng danh sách chỉ số'
+          OnChange = NameEditChange
+          TabOrder = 2
+        end
+        object PublicTestCaseEdit: TEdit
+          Left = 0
+          Height = 28
+          Top = 92
+          Width = 250
+          Align = alTop
+          TabOrder = 3
+          Text = 'PublicTestCaseEdit'
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 0
+        Height = 168
+        Top = 101
+        Width = 217
+        Align = alLeft
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = 'Quy định luồng vào ra'
+        ChildSizing.TopBottomSpacing = 5
+        ChildSizing.VerticalSpacing = 5
+        ClientHeight = 148
+        ClientWidth = 213
+        TabOrder = 3
+        object OutputStreamEdit: TEdit
+          Left = 0
+          Height = 28
+          Top = 67
+          Width = 213
+          Align = alTop
+          TabOrder = 0
+          Text = 'OutputStreamEdit'
+        end
+        object InputStreamEdit: TEdit
+          Left = 0
+          Height = 28
+          Top = 34
+          Width = 213
+          Align = alTop
+          TabOrder = 1
+          Text = 'InputStreamEdit'
+        end
+        object StandardStreamCheck: TCheckBox
+          Left = 0
+          Height = 24
+          Top = 5
+          Width = 213
+          Align = alTop
+          Caption = 'Dùng luồng vào ra chuẩn'
+          OnChange = NameEditChange
+          TabOrder = 2
+        end
+      end
+      object Splitter1: TSplitter
+        Left = 217
+        Height = 168
+        Top = 101
+        Width = 5
+      end
+      object SubtaskListLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 69
+        Width = 476
+        Align = alTop
+        BorderSpacing.Bottom = 14
+        Caption = 'SubtaskListLabel'
+        ParentColor = False
+      end
+      object SubtaskListButton: TButton
+        AnchorSideTop.Control = SubtaskListLabel
+        AnchorSideRight.Control = SubtaskListLabel
+        AnchorSideRight.Side = asrBottom
+        Left = 326
+        Height = 32
+        Top = 69
+        Width = 150
+        Action = actEditSubtask
+        Anchors = [akTop, akRight]
+        TabOrder = 5
+      end
+    end
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 37
+    Top = 317
+    Width = 468
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object ActionList1: TActionList
+    left = 384
+    top = 240
+    object actAdd: TAction
+      Caption = 'Thêm'
+      OnExecute = actAddExecute
+    end
+    object actRem: TAction
+      Caption = 'Xoá'
+      OnExecute = actRemExecute
+    end
+    object actEditLimit: TAction
+      Caption = 'Cài đặt giới hạn...'
+      OnExecute = actEditLimitExecute
+    end
+    object actEditToken: TAction
+      Caption = 'Cài đặt token...'
+      OnExecute = actEditTokenExecute
+    end
+    object actEditSubtask: TAction
+      Caption = 'Cài đặt subtask...'
+      OnExecute = actEditSubtaskExecute
+    end
+  end
+end

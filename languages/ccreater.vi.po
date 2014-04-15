@@ -1,0 +1,1006 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kien Nguyen <kien_coi_1997@yahoo.com.vn>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: contest_database.rschaquynhthig
+msgid "Chưa quy định thời gian cho kì thi"
+msgstr "Chưa quy định thời gian cho kì thi"
+
+#: contest_database.rscontestintro
+msgid "Contest introduction"
+msgstr "Đây là một kì thi"
+
+#: contest_database.rscontestnamei
+msgid "Contest name is an invalid identifier"
+msgstr "Tên kì thi phải là một định danh"
+
+#: contest_database.rscontestss
+msgid "Contest \"%s\": \"%s\""
+msgstr "Kì thi \"%s\": \"%s\""
+
+#: contest_database.rsexportdirect
+msgid "Export directory not found"
+msgstr "Không thấy thư mục xuất bản"
+
+#: contest_database.rsexportdirect2
+msgid "Export directory name must be the same with contest name"
+msgstr "Tên thư mục xuất bản phải trùng với trên kì thi"
+
+#: contest_database.rsfoundderrors
+msgid "Found %d error(s)"
+msgstr "Tìm thấy %d lỗi"
+
+#: contest_database.rskthibtuvoskt
+msgid "Kì thi bắt đầu vào %s, kết thúc vào %s"
+msgstr "Kì thi bắt đầu vào %s, kết thúc vào %s"
+
+#: contest_database.rsrequireatlea
+msgid "Require at least one user"
+msgstr "Phải có ít nhất một thí sinh"
+
+#: limit_database.rsdgiymtlnnp
+msgid ", %d giây một lần nộp"
+msgstr ", %d giây một lần nộp"
+
+#: limit_database.rsdgiymtlntest
+msgid ", %d giây một lần test"
+msgstr ", %d giây một lần test"
+
+#: limit_database.rsgiihn
+msgid "Giới hạn%s"
+msgstr "Giới hạn%s"
+
+#: limit_database.rskhngcgiihnnp
+msgid "Không có giới hạn nộp bài"
+msgstr "Không có giới hạn nộp bài"
+
+#: limit_database.rsnpdln
+msgid ", nộp %d lần"
+msgstr ", nộp %d lần"
+
+#: limit_database.rstestdln
+msgid ", test %d lần"
+msgstr ", test %d lần"
+
+#: limit_editor.rskhngcgiihn
+msgid "Không có giới hạn"
+msgstr "Không có giới hạn"
+
+#: limit_editor.rsnptiadln
+msgid "Nộp tối đa %d lần"
+msgstr "Nộp tối đa %d lần"
+
+#: limit_editor.rstgiihn
+msgid "Đã đặt giới hạn"
+msgstr "Đã đặt giới hạn"
+
+#: mainform.currentlanguage
+msgid "Some language"
+msgstr "vi"
+
+#: mainform.rsbnmunxohtccb
+msgid "Bạn muốn xoá hết các bài?"
+msgstr "Bạn muốn xoá hết các bài?"
+
+#: mainform.rsbnmunxohtccu
+msgid "Bạn muốn xoá hết các user?"
+msgstr "Bạn muốn xoá hết các user?"
+
+#: mainform.rsccreaterv000
+msgid "CCreater v0.000000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
+msgstr "CCreater v0.000000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
+
+#: mainform.rsfilehaschang
+msgid "File has changed. Save?"
+msgstr "Tệp tin đã có sự thay đổi. Bạn có muốn lưu lại hay không?"
+
+#: mainform.rsgplikhiangxu
+msgid "Gặp lỗi khi đang xuất kì thi"
+msgstr "Gặp lỗi khi đang xuất kì thi"
+
+#: mainform.rskimtranidung
+msgid "Kiểm tra nội dung thành công"
+msgstr "Kiểm tra nội dung thành công"
+
+#: mainform.rsphthinlitron
+msgid "Phát hiện lỗi trong kì thi"
+msgstr "Phát hiện lỗi trong kì thi"
+
+#: mainform.rsxutkthithnhc
+msgid "Xuất kì thi thành công"
+msgstr "Xuất kì thi thành công"
+
+#: taddproblemform.actinvalidate.caption
+msgctxt "taddproblemform.actinvalidate.caption"
+msgid "actInvalidate"
+msgstr ""
+
+#: taddproblemform.actregexload.caption
+msgid "Action2"
+msgstr ""
+
+#: taddproblemform.actregexload.hint
+msgid "Nạp test bằng Regex"
+msgstr "Nạp test bằng Regex"
+
+#: taddproblemform.actsimpleload.caption
+msgid "actSimpleLoad"
+msgstr ""
+
+#: taddproblemform.actsimpleload.hint
+msgid "Nạp test đơn giản"
+msgstr "Nạp test đơn giản"
+
+#: taddproblemform.actsortalphabet.caption
+msgid "actSortAlphabet"
+msgstr ""
+
+#: taddproblemform.actsortalphabet.hint
+msgid "Sắp xếp theo thứ tự từ điển"
+msgstr "Sắp xếp theo thứ tự từ điển"
+
+#: taddproblemform.actsortnumber.caption
+msgid "actSortNumber"
+msgstr ""
+
+#: taddproblemform.actsortnumber.hint
+msgid "Sắp xếp theo phần số"
+msgstr "Sắp xếp theo phần số"
+
+#: taddproblemform.actsortsize.caption
+msgid "actSortSize"
+msgstr ""
+
+#: taddproblemform.actsortsize.hint
+msgid "Sắp xếp theo kích thước"
+msgstr "Sắp xếp theo kích thước"
+
+#: taddproblemform.caption
+msgid "Nạp test"
+msgstr "Nạp test"
+
+#: taddproblemform.groupbox1ofaddproblem.caption
+msgid "Danh sách input và output"
+msgstr "Danh sách input và output"
+
+#: taddproblemform.searchdiredit.text
+msgid "SearchDirEdit"
+msgstr ""
+
+#: taddproblemform.searchdirlabel.caption
+msgid "Đường dẫn bộ test"
+msgstr "Đường dẫn bộ test"
+
+#: taddproblemform.toolbar1.caption
+msgctxt "taddproblemform.toolbar1.caption"
+msgid "ToolBar1"
+msgstr ""
+
+#: tcontesteditorform.actabout.caption
+msgid "Giới thiệu"
+msgstr "Giới thiệu"
+
+#: tcontesteditorform.actaddproblem.caption
+msgctxt "TCONTESTEDITORFORM.ACTADDPROBLEM.CAPTION"
+msgid "Thêm"
+msgstr "Thêm"
+
+#: tcontesteditorform.actaddproblem.hint
+msgid "Thêm bài tập"
+msgstr "Thêm bài tập"
+
+#: tcontesteditorform.actadduser.caption
+msgctxt "TCONTESTEDITORFORM.ACTADDUSER.CAPTION"
+msgid "Thêm"
+msgstr "Thêm"
+
+#: tcontesteditorform.actadduser.hint
+msgid "Thêm thí sinh"
+msgstr "Thêm thí sinh"
+
+#: tcontesteditorform.actclearproblem.caption
+msgctxt "tcontesteditorform.actclearproblem.caption"
+msgid "Xoá hết"
+msgstr "Xoá hết"
+
+#: tcontesteditorform.actclearproblem.hint
+msgid "Xoá danh sách bài tập"
+msgstr "Xoá danh sách bài tập"
+
+#: tcontesteditorform.actclearuser.caption
+msgctxt "TCONTESTEDITORFORM.ACTCLEARUSER.CAPTION"
+msgid "Xoá hết"
+msgstr "Xoá hết"
+
+#: tcontesteditorform.actclearuser.hint
+msgid "Xoá danh sách thí sinh"
+msgstr "Xoá danh sách thí sinh"
+
+#: tcontesteditorform.actcompile.caption
+msgid "Kiểm tra"
+msgstr "Kiểm tra"
+
+#: tcontesteditorform.actcompile.hint
+msgid "Kiểm tra thông tin kì thi"
+msgstr "Kiểm tra thông tin kì thi"
+
+#: tcontesteditorform.acteditlimit.caption
+msgctxt "tcontesteditorform.acteditlimit.caption"
+msgid "Cài đặt giới hạn..."
+msgstr "Cài đặt giới hạn..."
+
+#: tcontesteditorform.acteditproblem.caption
+msgctxt "tcontesteditorform.acteditproblem.caption"
+msgid "Sửa"
+msgstr "Sửa"
+
+#: tcontesteditorform.acteditproblem.hint
+msgid "Chỉnh sửa bài tập"
+msgstr "Chỉnh sửa bài tập"
+
+#: tcontesteditorform.acteditproperties.caption
+msgctxt "tcontesteditorform.acteditproperties.caption"
+msgid "Sửa hết"
+msgstr "Sửa hết"
+
+#: tcontesteditorform.acteditproperties.hint
+msgctxt "tcontesteditorform.acteditproperties.hint"
+msgid "Chỉnh thuộc tính bài tập"
+msgstr "Chỉnh thuộc tính bài tập"
+
+#: tcontesteditorform.actedittime.caption
+msgid "Cài đặt thời gian..."
+msgstr "Cài đặt thời gian..."
+
+#: tcontesteditorform.actedittoken.caption
+msgid "Cài đặt Token..."
+msgstr "Cài đặt Token..."
+
+#: tcontesteditorform.actedituser.caption
+msgctxt "TCONTESTEDITORFORM.ACTEDITUSER.CAPTION"
+msgid "Sửa"
+msgstr "Sửa"
+
+#: tcontesteditorform.actedituser.hint
+msgid "Sửa thí sinh"
+msgstr "Sửa thí sinh"
+
+#: tcontesteditorform.actexecute.caption
+msgctxt "TCONTESTEDITORFORM.ACTEXECUTE.CAPTION"
+msgid "Xuất bản"
+msgstr "Xuất bản"
+
+#: tcontesteditorform.actexecute.hint
+msgid "Xuất bản kì thi"
+msgstr "Xuất bản kì thi"
+
+#: tcontesteditorform.actexitfile.caption
+msgctxt "tcontesteditorform.actexitfile.caption"
+msgid "Thoát"
+msgstr "Thoát"
+
+#: tcontesteditorform.actexitfile.hint
+msgctxt "TCONTESTEDITORFORM.ACTEXITFILE.HINT"
+msgid "Thoát"
+msgstr "Thoát"
+
+#: tcontesteditorform.actimportuser.caption
+msgid "Nhập..."
+msgstr "Nhập..."
+
+#: tcontesteditorform.actimportuser.hint
+msgid "Nhập từ kì thi khác"
+msgstr "Nhập từ kì thi khác"
+
+#: tcontesteditorform.actopenfile.caption
+msgid "Mở"
+msgstr "Mở"
+
+#: tcontesteditorform.actopenfile.hint
+msgid "Mở file"
+msgstr "Mở file"
+
+#: tcontesteditorform.actremproblem.caption
+msgctxt "TCONTESTEDITORFORM.ACTREMPROBLEM.CAPTION"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: tcontesteditorform.actremproblem.hint
+msgid "Xoá bài tập"
+msgstr "Xoá bài tập"
+
+#: tcontesteditorform.actremuser.caption
+msgctxt "TCONTESTEDITORFORM.ACTREMUSER.CAPTION"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: tcontesteditorform.actremuser.hint
+msgid "Xoá thí sinh"
+msgstr "Xoá thí sinh"
+
+#: tcontesteditorform.actsaveasfile.caption
+msgid "Lưu với tên khác"
+msgstr "Lưu với tên khác"
+
+#: tcontesteditorform.actsavefile.caption
+msgid "Lưu"
+msgstr "Lưu"
+
+#: tcontesteditorform.actsavefile.hint
+msgid "Lưu file"
+msgstr "Lưu file"
+
+#: tcontesteditorform.button11.caption
+msgctxt "tcontesteditorform.button11.caption"
+msgid "Cài đặt token..."
+msgstr "Cài đặt token..."
+
+#: tcontesteditorform.button9.caption
+msgctxt "TCONTESTEDITORFORM.BUTTON9.CAPTION"
+msgid "..."
+msgstr "..."
+
+#: tcontesteditorform.button9.hint
+msgid "Chọn thư mục"
+msgstr "Chọn thư mục"
+
+#: tcontesteditorform.caption
+msgid "ContestEditorForm"
+msgstr ""
+
+#: tcontesteditorform.contestgeneraltab.caption
+msgctxt "TCONTESTEDITORFORM.CONTESTGENERALTAB.CAPTION"
+msgid "Tổng quan"
+msgstr "Tổng quan"
+
+#: tcontesteditorform.exportdiredit.text
+msgid "ExportDirEdit"
+msgstr ""
+
+#: tcontesteditorform.exportdirlabel.caption
+msgid "Đường dẫn thư mục chứa kì thi"
+msgstr "Đường dẫn thư mục chứa kì thi"
+
+#: tcontesteditorform.exporttab.caption
+msgctxt "tcontesteditorform.exporttab.caption"
+msgid "Xuất bản"
+msgstr "Xuất bản"
+
+#: tcontesteditorform.label1.caption
+msgid "Quá trình xuất bản"
+msgstr "Quá trình xuất bản"
+
+#: tcontesteditorform.label2.caption
+msgid "Change language"
+msgstr "English"
+
+#: tcontesteditorform.limitintroductionlabel.caption
+msgctxt "tcontesteditorform.limitintroductionlabel.caption"
+msgid "LimitIntroductionLabel"
+msgstr "LimitIntroductionLabel"
+
+#: tcontesteditorform.menuitem1.caption
+msgid "Tập tin"
+msgstr "Tập tin"
+
+#: tcontesteditorform.menuitem12.caption
+msgctxt "TCONTESTEDITORFORM.MENUITEM12.CAPTION"
+msgid "Xuất bản"
+msgstr "Xuất bản"
+
+#: tcontesteditorform.menuitem14.caption
+msgid "Trợ giúp"
+msgstr "Trợ giúp"
+
+#: tcontesteditorform.menuitem20.caption
+msgctxt "TCONTESTEDITORFORM.MENUITEM20.CAPTION"
+msgid "-"
+msgstr "-"
+
+#: tcontesteditorform.menuitem22.caption
+msgctxt "tcontesteditorform.menuitem22.caption"
+msgid "-"
+msgstr "-"
+
+#: tcontesteditorform.menuitem5.caption
+msgid "Bài tập"
+msgstr "Bài tập"
+
+#: tcontesteditorform.menuitem7.caption
+msgid "Thí sinh"
+msgstr "Thí sinh"
+
+#: tcontesteditorform.nameedit.text
+msgctxt "TCONTESTEDITORFORM.NAMEEDIT.TEXT"
+msgid "NameEdit"
+msgstr ""
+
+#: tcontesteditorform.namelabel.caption
+msgid "Tên kì thi ngắn gọn"
+msgstr "Tên kì thi ngắn gọn"
+
+#: tcontesteditorform.problemtab.caption
+msgid "Danh sách bài tập"
+msgstr "Danh sách bài tập"
+
+#: tcontesteditorform.timeintroductionlabel.caption
+msgid "TimeIntroductionLabel"
+msgstr ""
+
+#: tcontesteditorform.titleedit.text
+msgctxt "TCONTESTEDITORFORM.TITLEEDIT.TEXT"
+msgid "TitleEdit"
+msgstr ""
+
+#: tcontesteditorform.titlelabel.caption
+msgid "Tên kì thi đầy đủ"
+msgstr "Tên kì thi đầy đủ"
+
+#: tcontesteditorform.tokenintroductionlabel.caption
+msgctxt "tcontesteditorform.tokenintroductionlabel.caption"
+msgid "TokenIntroductionLabel"
+msgstr ""
+
+#: tcontesteditorform.toolbar1.caption
+msgctxt "TCONTESTEDITORFORM.TOOLBAR1.CAPTION"
+msgid "ToolBar1"
+msgstr ""
+
+#: tcontesteditorform.toolbutton14.caption
+msgid "ToolButton14"
+msgstr ""
+
+#: tcontesteditorform.toolbutton15.caption
+msgid "ToolButton15"
+msgstr ""
+
+#: tcontesteditorform.toolbutton6.caption
+msgid "ToolButton6"
+msgstr ""
+
+#: tcontesteditorform.toolbutton7.caption
+msgid "ToolButton7"
+msgstr ""
+
+#: tcontesteditorform.usertab.caption
+msgid "Danh sách thí sinh"
+msgstr "Danh sách thí sinh"
+
+#: teditproblemform.actadd.caption
+msgctxt "teditproblemform.actadd.caption"
+msgid "Thêm"
+msgstr "Thêm"
+
+#: teditproblemform.acteditlimit.caption
+msgctxt "teditproblemform.acteditlimit.caption"
+msgid "Cài đặt giới hạn..."
+msgstr "Cài đặt giới hạn..."
+
+#: teditproblemform.actedittoken.caption
+msgctxt "teditproblemform.actedittoken.caption"
+msgid "Cài đặt token..."
+msgstr "Cài đặt token..."
+
+#: teditproblemform.actrem.caption
+msgctxt "teditproblemform.actrem.caption"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: teditproblemform.button3.caption
+msgctxt "teditproblemform.button3.caption"
+msgid "OK"
+msgstr "OK"
+
+#: teditproblemform.button4.caption
+msgctxt "teditproblemform.button4.caption"
+msgid "Huỷ"
+msgstr "Huỷ"
+
+#: teditproblemform.caption
+msgid "EditProblemForm"
+msgstr ""
+
+#: teditproblemform.groupbox1.caption
+msgctxt "teditproblemform.groupbox1.caption"
+msgid "Danh sách test được công khai"
+msgstr "Danh sách test được công khai"
+
+#: teditproblemform.groupbox2.caption
+msgctxt "teditproblemform.groupbox2.caption"
+msgid "Quy định luồng vào ra"
+msgstr "Quy định luồng vào ra"
+
+#: teditproblemform.inputstreamedit.text
+msgctxt "teditproblemform.inputstreamedit.text"
+msgid "InputStreamEdit"
+msgstr ""
+
+#: teditproblemform.limitintroductionlabel.caption
+msgctxt "teditproblemform.limitintroductionlabel.caption"
+msgid "LimitIntroductionLabel"
+msgstr "LimitIntroductionLabel"
+
+#: teditproblemform.memlabel.caption
+msgctxt "teditproblemform.memlabel.caption"
+msgid "Bộ nhớ"
+msgstr "Bộ nhớ"
+
+#: teditproblemform.nameedit.text
+msgctxt "teditproblemform.nameedit.text"
+msgid "NameEdit"
+msgstr ""
+
+#: teditproblemform.namelabel.caption
+msgctxt "teditproblemform.namelabel.caption"
+msgid "Mã bài tập"
+msgstr "Mã bài tập"
+
+#: teditproblemform.outputstreamedit.text
+msgctxt "teditproblemform.outputstreamedit.text"
+msgid "OutputStreamEdit"
+msgstr ""
+
+#: teditproblemform.publictestcaseedit.text
+msgctxt "teditproblemform.publictestcaseedit.text"
+msgid "PublicTestCaseEdit"
+msgstr ""
+
+#: teditproblemform.radiobutton1.caption
+msgctxt "teditproblemform.radiobutton1.caption"
+msgid "Nhìn thấy hết"
+msgstr "Nhìn thấy hết"
+
+#: teditproblemform.radiobutton2.caption
+msgctxt "teditproblemform.radiobutton2.caption"
+msgid "Ẩn hết"
+msgstr "Ẩn hết"
+
+#: teditproblemform.radiobutton3.caption
+msgctxt "teditproblemform.radiobutton3.caption"
+msgid "Dùng danh sách chỉ số ngăn cách bằng dấu phảy"
+msgstr "Dùng danh sách chỉ số ngăn cách bằng dấu phảy"
+
+#: teditproblemform.standardstreamcheck.caption
+msgctxt "teditproblemform.standardstreamcheck.caption"
+msgid "Dùng luồng vào ra chuẩn"
+msgstr "Dùng luồng vào ra chuẩn"
+
+#: teditproblemform.statementbutton.caption
+msgctxt "teditproblemform.statementbutton.caption"
+msgid "..."
+msgstr "..."
+
+#: teditproblemform.statementedit.text
+msgctxt "teditproblemform.statementedit.text"
+msgid "StatementEdit"
+msgstr ""
+
+#: teditproblemform.statementlabel.caption
+msgctxt "teditproblemform.statementlabel.caption"
+msgid "Đề bài"
+msgstr "Đề bài"
+
+#: teditproblemform.tabsheet1.caption
+msgctxt "teditproblemform.tabsheet1.caption"
+msgid "Input và output"
+msgstr "Input và output"
+
+#: teditproblemform.tabsheet2.caption
+msgctxt "teditproblemform.tabsheet2.caption"
+msgid "Tổng quan"
+msgstr "Tổng quan"
+
+#: teditproblemform.tabsheet3.caption
+msgctxt "teditproblemform.tabsheet3.caption"
+msgid "Nâng cao"
+msgstr "Nâng cao"
+
+#: teditproblemform.timelabel.caption
+msgctxt "teditproblemform.timelabel.caption"
+msgid "Thời gian chạy"
+msgstr "Thời gian chạy"
+
+#: teditproblemform.titleedit.text
+msgctxt "teditproblemform.titleedit.text"
+msgid "TitleEdit"
+msgstr ""
+
+#: teditproblemform.titlelabel.caption
+msgctxt "teditproblemform.titlelabel.caption"
+msgid "Tên bài tập"
+msgstr "Tên bài tập"
+
+#: teditproblemform.tokenintroductionlabel.caption
+msgctxt "teditproblemform.tokenintroductionlabel.caption"
+msgid "TokenIntroductionLabel"
+msgstr ""
+
+#: tedituserform.caption
+msgid "EditUserForm"
+msgstr "Sửa thông tin thí sinh"
+
+#: tedituserform.firstnameedit.text
+msgid "FirstNameEdit"
+msgstr "Tên"
+
+#: tedituserform.firstnamelabel.caption
+msgid "FirstNameLabel"
+msgstr "Tên"
+
+#: tedituserform.hiddencheck.caption
+msgid "HiddenCheck"
+msgstr "Ẩn"
+
+#: tedituserform.hiddenlabel.caption
+msgid "HiddenLabel"
+msgstr "Ẩn"
+
+#: tedituserform.ipedit.text
+msgid "IPEdit"
+msgstr ""
+
+#: tedituserform.iplabel.caption
+msgid "IPLabel"
+msgstr "IP được phép đăng nhập"
+
+#: tedituserform.lastnameedit.text
+msgid "LastNameEdit"
+msgstr ""
+
+#: tedituserform.lastnamelabel.caption
+msgid "LastNameLabel"
+msgstr "Họ"
+
+#: tedituserform.nameedit.text
+msgctxt "TEDITUSERFORM.NAMEEDIT.TEXT"
+msgid "NameEdit"
+msgstr ""
+
+#: tedituserform.namelabel.caption
+msgid "NameLabel"
+msgstr "Tên đăng nhập"
+
+#: tedituserform.passwordedit.text
+msgid "PasswordEdit"
+msgstr ""
+
+#: tedituserform.passwordlabel.caption
+msgid "PasswordLabel"
+msgstr "Mật khẩu"
+
+#: tedituserform.tabsheet1.caption
+msgctxt "TEDITUSERFORM.TABSHEET1.CAPTION"
+msgid "Tổng quan"
+msgstr "Tổng quan"
+
+#: tedituserform.tabsheet2.caption
+msgctxt "tedituserform.tabsheet2.caption"
+msgid "Nâng cao"
+msgstr "Nâng cao"
+
+#: tform1.caption
+msgid "Form1"
+msgstr ""
+
+#: tlimiteditor.caption
+msgid "LimitEditor"
+msgstr "Cài đặt giới hạn"
+
+#: tlimiteditor.msilabel.caption
+msgid "MSILabel"
+msgstr "Thời gian giữa hai lần nộp"
+
+#: tlimiteditor.msnlabel.caption
+msgid "MSNLabel"
+msgstr "Số lần nộp tối đa"
+
+#: tlimiteditor.mutilabel.caption
+msgid "MUTILabel"
+msgstr "Thời gian giữa hai lần test"
+
+#: tlimiteditor.mutnlabel.caption
+msgid "MUTNLabel"
+msgstr "Số lần test tối đa"
+
+#: token_database.rstokenangbtt
+msgid "Token đang bị tắt"
+msgstr "Token đang bị tắt"
+
+#: token_database.rstokencbt
+msgid "Token đã được bật"
+msgstr "Token đã được bật"
+
+#: token_editor.rstokenangbt
+msgid "Token đang bật"
+msgstr "Token đang bật"
+
+#: token_editor.rstokenangtt
+msgid "Token đang tắt"
+msgstr "Token đang tắt"
+
+#: tproblemeditor.actadd.caption
+msgctxt "tproblemeditor.actadd.caption"
+msgid "Thêm"
+msgstr "Thêm"
+
+#: tproblemeditor.acteditlimit.caption
+msgctxt "tproblemeditor.acteditlimit.caption"
+msgid "Cài đặt giới hạn..."
+msgstr "Cài đặt giới hạn..."
+
+#: tproblemeditor.acteditsubtask.caption
+msgid "Cài đặt subtask..."
+msgstr ""
+
+#: tproblemeditor.actedittoken.caption
+msgctxt "tproblemeditor.actedittoken.caption"
+msgid "Cài đặt token..."
+msgstr "Cài đặt token..."
+
+#: tproblemeditor.actrem.caption
+msgctxt "tproblemeditor.actrem.caption"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: tproblemeditor.caption
+msgid "ProblemEditor"
+msgstr ""
+
+#: tproblemeditor.groupbox1.caption
+msgctxt "tproblemeditor.groupbox1.caption"
+msgid "Danh sách test được công khai"
+msgstr "Danh sách test được công khai"
+
+#: tproblemeditor.groupbox2.caption
+msgctxt "tproblemeditor.groupbox2.caption"
+msgid "Quy định luồng vào ra"
+msgstr "Quy định luồng vào ra"
+
+#: tproblemeditor.inputstreamedit.text
+msgctxt "tproblemeditor.inputstreamedit.text"
+msgid "InputStreamEdit"
+msgstr ""
+
+#: tproblemeditor.limitlabel.caption
+msgid "LimitLabel"
+msgstr ""
+
+#: tproblemeditor.memlabel.caption
+msgctxt "tproblemeditor.memlabel.caption"
+msgid "Bộ nhớ"
+msgstr "Bộ nhớ"
+
+#: tproblemeditor.nameedit.text
+msgctxt "tproblemeditor.nameedit.text"
+msgid "NameEdit"
+msgstr ""
+
+#: tproblemeditor.namelabel.caption
+msgctxt "tproblemeditor.namelabel.caption"
+msgid "Mã bài tập"
+msgstr "Mã bài tập"
+
+#: tproblemeditor.outputstreamedit.text
+msgctxt "tproblemeditor.outputstreamedit.text"
+msgid "OutputStreamEdit"
+msgstr ""
+
+#: tproblemeditor.publictestcaseedit.text
+msgctxt "tproblemeditor.publictestcaseedit.text"
+msgid "PublicTestCaseEdit"
+msgstr ""
+
+#: tproblemeditor.radiobutton1.caption
+msgctxt "tproblemeditor.radiobutton1.caption"
+msgid "Nhìn thấy hết"
+msgstr "Nhìn thấy hết"
+
+#: tproblemeditor.radiobutton2.caption
+msgctxt "tproblemeditor.radiobutton2.caption"
+msgid "Ẩn hết"
+msgstr "Ẩn hết"
+
+#: tproblemeditor.radiobutton3.caption
+msgctxt "tproblemeditor.radiobutton3.caption"
+msgid "Dùng danh sách chỉ số"
+msgstr "Dùng danh sách chỉ số"
+
+#: tproblemeditor.standardstreamcheck.caption
+msgctxt "tproblemeditor.standardstreamcheck.caption"
+msgid "Dùng luồng vào ra chuẩn"
+msgstr "Dùng luồng vào ra chuẩn"
+
+#: tproblemeditor.statementbutton.caption
+msgctxt "tproblemeditor.statementbutton.caption"
+msgid "..."
+msgstr "..."
+
+#: tproblemeditor.statementedit.text
+msgctxt "tproblemeditor.statementedit.text"
+msgid "StatementEdit"
+msgstr ""
+
+#: tproblemeditor.statementlabel.caption
+msgctxt "tproblemeditor.statementlabel.caption"
+msgid "Đề bài"
+msgstr "Đề bài"
+
+#: tproblemeditor.subtasklistlabel.caption
+msgid "SubtaskListLabel"
+msgstr ""
+
+#: tproblemeditor.tabsheet1.caption
+msgctxt "tproblemeditor.tabsheet1.caption"
+msgid "Input và output"
+msgstr "Input và output"
+
+#: tproblemeditor.tabsheet2.caption
+msgctxt "tproblemeditor.tabsheet2.caption"
+msgid "Tổng quan"
+msgstr "Tổng quan"
+
+#: tproblemeditor.tabsheet3.caption
+msgctxt "tproblemeditor.tabsheet3.caption"
+msgid "Nâng cao"
+msgstr "Nâng cao"
+
+#: tproblemeditor.timelabel.caption
+msgctxt "tproblemeditor.timelabel.caption"
+msgid "Thời gian chạy"
+msgstr "Thời gian chạy"
+
+#: tproblemeditor.titleedit.text
+msgctxt "tproblemeditor.titleedit.text"
+msgid "TitleEdit"
+msgstr ""
+
+#: tproblemeditor.titlelabel.caption
+msgctxt "tproblemeditor.titlelabel.caption"
+msgid "Tên bài tập"
+msgstr "Tên bài tập"
+
+#: tproblemeditor.tokenlabel.caption
+msgid "TokenLabel"
+msgstr ""
+
+#: tpropertieseditor.caption
+msgid "PropertiesEditor"
+msgstr ""
+
+#: tpropertieseditor.combobox1.text
+msgid "ComboBox1"
+msgstr ""
+
+#: tpropertieseditor.label2.caption
+msgid "Chọn cột để thao tác"
+msgstr "Chọn cột để thao tác"
+
+#: tregexoptionform.aexpredit.text
+msgid "AExprEdit"
+msgstr ""
+
+#: tregexoptionform.aexprlabel.caption
+msgid "Biểu thức Regex của input"
+msgstr "Biểu thức Regex của input"
+
+#: tregexoptionform.bexpredit.text
+msgid "BExprEdit"
+msgstr ""
+
+#: tregexoptionform.bexprlabel.caption
+msgid "Biểu thức Regex của output"
+msgstr "Biểu thức Regex của output"
+
+#: tregexoptionform.caption
+msgid "RegexOptionForm"
+msgstr "Tuỳ chỉnh Regex"
+
+#: tsubtaskeditor.caption
+msgid "SubtaskEditor"
+msgstr ""
+
+#: tsubtaskeditor.subtaskenabledcheck.caption
+msgid "SubtaskEnabledCheck"
+msgstr ""
+
+#: ttimeeditor.button1.caption
+msgid "Tổ chức hôm nay"
+msgstr "Tổ chức hôm nay"
+
+#: ttimeeditor.button2.caption
+msgid "Bắt đầu vào giờ, phút này"
+msgstr "Bắt đầu vào giờ, phút này"
+
+#: ttimeeditor.caption
+msgid "TimeEditor"
+msgstr "Cài đặt thời gian"
+
+#: ttimeeditor.durationlabel.caption
+msgid "Thời lượng (phút)"
+msgstr "Thời lượng (phút)"
+
+#: ttimeeditor.groupbox1.caption
+msgid "Ngày tổ chức"
+msgstr "Ngày tổ chức"
+
+#: ttimeeditor.groupbox2.caption
+msgid "Thời gian"
+msgstr "Thời gian"
+
+#: ttimeeditor.hourlabel.caption
+msgid "Giờ"
+msgstr "Giờ"
+
+#: ttimeeditor.minutelabel.caption
+msgid "Phút"
+msgstr "Phút"
+
+#: ttimeeditor.starttimesetcheck.caption
+msgid "Quy định thời gian"
+msgstr "Quy định thời gian"
+
+#: ttokeneditor.caption
+msgid "TokenEditor"
+msgstr "Cài đặt token"
+
+#: ttokeneditor.gennumberlabel.caption
+msgid "GenNumberLabel"
+msgstr "Số token sinh ra mỗi lần sinh"
+
+#: ttokeneditor.gentimelabel.caption
+msgid "GenTimeLabel"
+msgstr "Thời gian cho mỗi lần sinh"
+
+#: ttokeneditor.initiallabel.caption
+msgid "InitialLabel"
+msgstr "Số token ban đầu"
+
+#: ttokeneditor.maxlabel.caption
+msgid "MaxLabel"
+msgstr "Số token tối đa có thể có"
+
+#: ttokeneditor.minintervallabel.caption
+msgid "MinIntervalLabel"
+msgstr "Khoảng thời gian giữa những token"
+
+#: ttokeneditor.tokenadvancedtab.caption
+msgctxt "TTOKENEDITOR.TOKENADVANCEDTAB.CAPTION"
+msgid "Nâng cao"
+msgstr "Nâng cao"
+
+#: ttokeneditor.tokenenabledcheck.caption
+msgid "TokenEnabledCheck"
+msgstr "Bật token"
+
+#: ttokeneditor.tokengeneraltab.caption
+msgid "Tổng quát"
+msgstr "Tổng quát"
+
+#: ttokeneditor.tokeninfinitecheck.caption
+msgid "TokenInfiniteCheck"
+msgstr "Vô hạn token"
+
+#: ttokeneditor.totallabel.caption
+msgid "TotalLabel"
+msgstr "Số token tối đa được dùng"
+
+#: user_database.rsintheuserss
+msgid "In the user \"%s\": %s"
+msgstr "Thí sinh \"%s\": %s"
+
+#: user_database.rspasswordisan
+msgid "Password is an empty string"
+msgstr "Mật khẩu không được để trống"
+
+#: user_database.rsusernameisan
+msgid "User name is an invalid identifier"
+msgstr "Tên đăng nhập phải là một định danh"
+
