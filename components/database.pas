@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, IniFiles, contnrs, FileUtil, Math, dateutils,
   multi_update, user_database, token_database, limit_database, problem_database,
-  contest_database;
+  contest_database, workspace_database;
 
 type
   TUser = user_database.TUser;
@@ -31,6 +31,7 @@ procedure AddValue(List: TStringList; Key: String; Value: Integer);
 procedure SaveContestToFile(FileName: String; Contest: TContest);
 var List: TIniFile;
 begin
+  Workspace.RecentFileList.Add(FileName);
   List := TIniFile.Create(FileName);
   Contest.SaveToStream(List, 'Contest');
   List.Free;
@@ -39,6 +40,7 @@ end;
 procedure LoadContestFromFile(FileName: String; Contest: TContest);
 var List: TIniFile;
 begin
+  Workspace.RecentFileList.Add(FileName);
   List := TIniFile.Create(FileName);
   Contest.LoadFromStream(List, 'Contest');
   List.Free;

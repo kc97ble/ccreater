@@ -1,0 +1,304 @@
+object TestFilter1: TTestFilter1
+  Left = 638
+  Height = 480
+  Top = 266
+  Width = 640
+  Caption = 'TestFilter1'
+  ChildSizing.TopBottomSpacing = 5
+  ChildSizing.VerticalSpacing = 5
+  ClientHeight = 480
+  ClientWidth = 640
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.2.0.3'
+  object Splitter1: TSplitter
+    Left = 219
+    Height = 470
+    Top = 5
+    Width = 5
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 470
+    Top = 5
+    Width = 219
+    Align = alLeft
+    Caption = 'Chọn thư mục'
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.VerticalSpacing = 5
+    ClientHeight = 450
+    ClientWidth = 215
+    TabOrder = 1
+    object ShellTreeView1: TShellTreeView
+      Left = 0
+      Height = 384
+      Top = 5
+      Width = 215
+      Align = alClient
+      FileSortType = fstFoldersFirst
+      ReadOnly = True
+      TabOrder = 0
+      OnSelectionChanged = ShellTreeView1SelectionChanged
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      ObjectTypes = [otFolders]
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 0
+      Height = 28
+      Top = 417
+      Width = 215
+      Align = alBottom
+      TabOrder = 1
+      Value = 2
+    end
+    object Label1: TLabel
+      Left = 0
+      Height = 18
+      Top = 394
+      Width = 215
+      Align = alBottom
+      Caption = 'Độ sâu tối đa'
+      ParentColor = False
+    end
+  end
+  object Panel1: TPanel
+    Left = 224
+    Height = 470
+    Top = 5
+    Width = 416
+    Align = alClient
+    ChildSizing.TopBottomSpacing = 5
+    ChildSizing.VerticalSpacing = 5
+    ClientHeight = 470
+    ClientWidth = 416
+    TabOrder = 2
+    object TreeView1: TTreeView
+      Left = 1
+      Height = 192
+      Top = 6
+      Width = 414
+      Align = alClient
+      PopupMenu = PopupMenu1
+      ReadOnly = True
+      TabOrder = 0
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+    object Splitter2: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 5
+      Top = 240
+      Width = 414
+      Align = alBottom
+      ResizeAnchor = akBottom
+    end
+    object Panel2: TGroupBox
+      Left = 1
+      Height = 133
+      Top = 250
+      Width = 414
+      Align = alBottom
+      Caption = 'Danh sách input và output'
+      ChildSizing.TopBottomSpacing = 5
+      ChildSizing.VerticalSpacing = 5
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.Layout = cclTopToBottomThenLeftToRight
+      ClientHeight = 114
+      ClientWidth = 410
+      TabOrder = 2
+      object ListBox1: TListBox
+        Left = 0
+        Height = 104
+        Top = 5
+        Width = 205
+        ItemHeight = 0
+        MultiSelect = True
+        PopupMenu = PopupMenu2
+        ScrollWidth = 203
+        TabOrder = 0
+        TopIndex = -1
+      end
+      object ListBox2: TListBox
+        Left = 205
+        Height = 104
+        Top = 5
+        Width = 205
+        ItemHeight = 0
+        PopupMenu = PopupMenu2
+        ScrollWidth = 203
+        TabOrder = 1
+        TopIndex = -1
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Height = 32
+      Top = 203
+      Width = 414
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 32
+      ClientWidth = 414
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      object InputButton: TButton
+        Left = 0
+        Height = 32
+        Top = 0
+        Width = 100
+        Action = addAsInput
+        Align = alLeft
+        TabOrder = 0
+      end
+      object AddOutputButton: TButton
+        Left = 100
+        Height = 32
+        Top = 0
+        Width = 100
+        Action = addAsOutput
+        Align = alLeft
+        TabOrder = 1
+      end
+      object RemoveNodeButton: TSpeedButton
+        Left = 200
+        Height = 32
+        Top = 0
+        Width = 100
+        Action = remSelectedNode
+        Align = alLeft
+      end
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 32
+      Top = 388
+      Width = 414
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 32
+      ClientWidth = 414
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      object RemItemButton: TSpeedButton
+        Left = 0
+        Height = 32
+        Top = 0
+        Width = 75
+        Action = remSelectedItem
+        Align = alLeft
+      end
+      object ClearItemButton: TSpeedButton
+        Left = 75
+        Height = 32
+        Top = 0
+        Width = 75
+        Action = remAllItems
+        Align = alLeft
+      end
+      object UpItemButton: TSpeedButton
+        Left = 150
+        Height = 32
+        Top = 0
+        Width = 75
+        Action = movItemsUp
+        Align = alLeft
+      end
+      object DownItemButton: TSpeedButton
+        Left = 225
+        Height = 32
+        Top = 0
+        Width = 75
+        Action = movItemsDown
+        Align = alLeft
+      end
+    end
+    object ButtonPanel1: TButtonPanel
+      Left = 7
+      Height = 37
+      Top = 426
+      Width = 402
+      OKButton.Name = 'OKButton'
+      OKButton.DefaultCaption = True
+      HelpButton.Name = 'HelpButton'
+      HelpButton.DefaultCaption = True
+      CloseButton.Name = 'CloseButton'
+      CloseButton.DefaultCaption = True
+      CancelButton.Name = 'CancelButton'
+      CancelButton.DefaultCaption = True
+      TabOrder = 5
+      ShowButtons = [pbOK, pbCancel]
+    end
+  end
+  object ActionList1: TActionList
+    left = 368
+    top = 96
+    object remSelectedNode: TAction
+      Caption = 'Xoá'
+      Hint = 'Xoá vùng chọn'
+      OnExecute = remSelectedNodeExecute
+    end
+    object addAsInput: TAction
+      Caption = 'Thêm input'
+      Hint = 'Thêm vùng chọn vào danh sách input'
+      OnExecute = addAsInputExecute
+    end
+    object addAsOutput: TAction
+      Caption = 'Thêm output'
+      Hint = 'Thêm vùng chọn vào danh sách output'
+      OnExecute = addAsOutputExecute
+    end
+    object remSelectedItem: TAction
+      Caption = 'Xoá'
+      Hint = 'Xoá vùng chọn trong danh sách'
+      OnExecute = remSelectedItemExecute
+    end
+    object remAllItems: TAction
+      Caption = 'Xoá hết'
+      Hint = 'Xoá hết danh sách'
+      OnExecute = remAllItemsExecute
+    end
+    object movItemsUp: TAction
+      Caption = 'Lên'
+      Hint = 'Di chuyển vùng chọn lên trên'
+      OnExecute = movItemsUpExecute
+    end
+    object movItemsDown: TAction
+      Caption = 'Xuống'
+      Hint = 'Di chuyển cùng chọn xuống dưới'
+      OnExecute = movItemsDownExecute
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 416
+    top = 96
+    object MenuItem1: TMenuItem
+      Action = addAsInput
+    end
+    object MenuItem2: TMenuItem
+      Action = addAsOutput
+    end
+    object MenuItem3: TMenuItem
+      Action = remSelectedNode
+    end
+  end
+  object PopupMenu2: TPopupMenu
+    left = 464
+    top = 96
+    object MenuItem4: TMenuItem
+      Action = remSelectedItem
+    end
+    object MenuItem5: TMenuItem
+      Action = remAllItems
+    end
+    object MenuItem6: TMenuItem
+      Action = movItemsUp
+    end
+    object MenuItem7: TMenuItem
+      Action = movItemsDown
+    end
+  end
+end

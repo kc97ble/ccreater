@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
   StdCtrls, Spin, Buttons, ExtCtrls, ActnList, PairSplitter, ButtonPanel,
   add_problem_form, utils, database, problem_database, multi_update,
-  token_editor, limit_editor, subtask_editor;
+  token_editor, limit_editor, subtask_editor, test_filter_1;
 
 type
 
@@ -19,13 +19,22 @@ type
     actEditLimit: TAction;
     actEditToken: TAction;
     actEditSubtask: TAction;
+    addByFilter1: TAction;
     actRem: TAction;
     ActionList1: TActionList;
     Button1: TButton;
+    Button3: TButton;
+    CheckerButton: TButton;
+    CheckerEdit: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    CheckerLabel: TLabel;
     SubtaskListButton: TButton;
     ButtonPanel1: TButtonPanel;
     SubtaskListLabel: TLabel;
     StandardStreamCheck: TCheckBox;
+    TabSheet7: TTabSheet;
+    TabSheet8: TTabSheet;
     TokenButton: TButton;
     LimitButton: TButton;
     Button2: TButton;
@@ -33,15 +42,12 @@ type
     PublicTestCaseEdit: TEdit;
     InputStreamEdit: TEdit;
     OutputStreamEdit: TEdit;
-    GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
     LimitLabel: TLabel;
     NameEdit: TEdit;
     Panel2: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
-    Splitter1: TSplitter;
     TabSheet3: TTabSheet;
     TimeEdit: TSpinEdit;
     TitleEdit: TEdit;
@@ -62,6 +68,8 @@ type
     procedure actEditSubtaskExecute(Sender: TObject);
     procedure actEditTokenExecute(Sender: TObject);
     procedure actRemExecute(Sender: TObject);
+    procedure addByFilter1Execute(Sender: TObject);
+    procedure CheckerButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure NameEditChange(Sender: TObject);
@@ -122,26 +130,23 @@ end;
 
 procedure TProblemEditor.actEditLimitExecute(Sender: TObject);
 begin
-  if FLimitEditor.ShowModal <> mrOK then
-    FLimitEditor.LoadControls(FProblem.Limit)
-  else
-    InvalidateControls;
+  if FLimitEditor.ShowModal <> mrOK
+  then FLimitEditor.LoadControls(FProblem.Limit)
+  else InvalidateControls;
 end;
 
 procedure TProblemEditor.actEditSubtaskExecute(Sender: TObject);
 begin
-  if FSubtaskEditor.ShowModal = mrOK then
-    InvalidateControls
-  else
-    FSubtaskEditor.LoadControls(FProblem.SubtaskList);
+  if FSubtaskEditor.ShowModal = mrOK
+  then InvalidateControls
+  else FSubtaskEditor.LoadControls(FProblem.SubtaskList);
 end;
 
 procedure TProblemEditor.actEditTokenExecute(Sender: TObject);
 begin
-  if FTokenEditor.ShowModal <> mrOK then
-    FTokenEditor.LoadControls(FProblem.Token)
-  else
-    InvalidateControls;
+  if FTokenEditor.ShowModal <> mrOK
+  then FTokenEditor.LoadControls(FProblem.Token)
+  else InvalidateControls;
 end;
 
 procedure TProblemEditor.actRemExecute(Sender: TObject);
@@ -159,6 +164,22 @@ begin
   Outputs.EndUpdate;
   UpdateControl(ListBox1);
   InvalidateControls;
+end;
+
+procedure TProblemEditor.addByFilter1Execute(Sender: TObject);
+begin
+  if TTestFilter1.DefaultExecute(Inputs, Outputs) = mrOK then
+  begin
+    InvalidateControls;
+    UpdateControl(ListBox1);
+  end;
+end;
+
+procedure TProblemEditor.CheckerButtonClick(Sender: TObject);
+var S: String;
+begin
+  if ExecuteOpenDialog(S) then
+  CheckerEdit.Text:=S;
 end;
 
 procedure TProblemEditor.FormCreate(Sender: TObject);
@@ -232,8 +253,11 @@ end;
 procedure TProblemEditor.LoadControls(Problem: TProblem);
 begin
   with Problem do WriteToControls(
-    [NameEdit, TitleEdit, TimeEdit, MemEdit, StatementEdit, InputStreamEdit, OutputStreamEdit, PublicTestCaseEdit],
-    [Name, Title, TimeLimit, MemLimit, StatementFile, InputStreamFile, OutputStreamFile, PublicTestCase]);
+    [NameEdit, TitleEdit, TimeEdit, MemEdit, StatementEdit, InputStreamEdit],
+    [Name, Title, TimeLimit, MemLimit, StatementFile, InputStreamFile]);
+  with Problem do WriteToControls(
+    [OutputStreamEdit, PublicTestCaseEdit, CheckerEdit],
+    [OutputStreamFile, PublicTestCase, Checker]);
   with Problem do WriteToPersistent(
     [Inputs, Outputs],
     [InputList, OutputList]);
@@ -257,8 +281,11 @@ end;
 procedure TProblemEditor.SaveControls(Problem: TProblem);
 begin
   with Problem do ReadFromControls(
-    [NameEdit, TitleEdit, TimeEdit, MemEdit, StatementEdit, InputStreamEdit, OutputStreamEdit, PublicTestCaseEdit],
-    [@Name, @Title, @TimeLimit, @MemLimit, @StatementFile, @InputStreamFile, @OutputStreamFile, @PublicTestCase]);
+    [NameEdit, TitleEdit, TimeEdit, MemEdit, StatementEdit, InputStreamEdit],
+    [@Name, @Title, @TimeLimit, @MemLimit, @StatementFile, @InputStreamFile]);
+  with Problem do ReadFromControls(
+    [OutputStreamEdit, PublicTestCaseEdit, CheckerEdit],
+    [@OutputStreamFile, @PublicTestCase, @Checker]);
   with Problem do ReadFromPersistent(
     [Inputs, Outputs],
     [InputList, OutputList]);

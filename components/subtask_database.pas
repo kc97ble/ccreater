@@ -7,6 +7,17 @@ interface
 uses
   Classes, SysUtils, contnrs, IniFiles, basic_database, multi_update;
 
+resourcestring
+  rsSubtaskIntro = 'Subtask introduction';
+  rsSubtaskListS = 'Subtask list: "%s"';
+  rsSubtaskInter = 'Subtask intervals must be continuous';
+  rsLengthOfSubt = 'Length of subtask intervals must be positive';
+  rsSomeTestNotA = 'Some test not appeared';
+  rsSubtaskModeE = 'Subtask mode enabled';
+  rsSubtaskModeD = 'Subtask mode disabled';
+  DefaultStatementFile = 'languages/almost_blank_page.pdf';
+  rsSumScoreOfSu = 'Sum score of subtasks must be exactly 100.0';
+
 type
 
   { TSubtask }
@@ -30,6 +41,7 @@ type
     procedure SetSubtask(Index: Integer; AValue: TSubtask);
     procedure SetCount(NewCount: Integer);
   public
+    OwnerProblemListCount: Integer;
     Enabled: Boolean;
     constructor Create;
     destructor Destroy; override;
@@ -76,7 +88,7 @@ end;
 
 function TSubtask.Introduction: String;
 begin
-  Result := 'Subtask introduction';
+  Result := rsSubtaskIntro;
 end;
 
 { TSubtaskList }
@@ -130,16 +142,40 @@ begin
 end;
 
 function TSubtaskList.IsValid(Message: TStrings): Boolean;
-var i: Integer;
+var
+  i, Pos: Integer;
+  ErrorCount: Integer=0;
+  SumScore: Integer=0;
+
+  procedure ErrorIf(B: Boolean; S: String);
+  begin
+    if B then ErrorCount += 1 else exit;
+    if S<>'' then Message.Add(Format(rsSubtaskListS, [S]));
+  end;
+
 begin
-  Result := True;
-  for i := 0 to FList.Count-1 do
-  Result := Result and Subtask[i].IsValid(Message);
+  if not Enabled then exit(True);
+  Pos := 0;
+  for i := 0 to Count-1 do
+  begin
+    ErrorIf(Subtask[i].Head<>Pos, rsSubtaskInter);
+    ErrorIf(Subtask[i].Tail<Pos, rsLengthOfSubt);
+    Pos := Subtask[i].Tail+1;
+    SumScore += Subtask[i].Score;
+  end;
+  ErrorIf(SumScore<>100, rsSumScoreOfSu);
+  //ErrorIf(Pos <> OwnerProblemListCount, rsSomeTestNotA);
+  for i := 0 to Count-1 do
+  ErrorIf(not Subtask[i].IsValid(Message), '');
+  Result := ErrorCount=0;
 end;
 
 function TSubtaskList.Introduction: String;
 begin
-  Result := 'Subtasklist introduction';
+  if Enabled then
+    Result := rsSubtaskModeE
+  else
+    Result := rsSubtaskModeD;
 end;
 
 operator ** (A, B: String) C: String;
@@ -158,6 +194,7 @@ begin
     List := TStringList.Create;
     try
       ExportToStream(List);
+      ForceDirectories(Dir**'gen');
       List.SaveToFile(Dir**'gen'**'GEN');
     except
       on E: Exception do

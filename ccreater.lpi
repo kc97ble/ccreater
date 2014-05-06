@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="21">
+    <Units Count="23">
       <Unit0>
         <Filename Value="ccreater.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -171,6 +171,19 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="subtask_editor"/>
       </Unit20>
+      <Unit21>
+        <Filename Value="components/workspace_database.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="workspace_database"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="components/test_filter_1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TestFilter1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="test_filter_1"/>
+      </Unit22>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

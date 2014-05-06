@@ -1,7 +1,7 @@
 object ContestEditorForm: TContestEditorForm
   Left = 678
   Height = 450
-  Top = 320
+  Top = 296
   Width = 600
   ActiveControl = PageControl1
   Caption = 'ContestEditorForm'
@@ -401,6 +401,7 @@ object ContestEditorForm: TContestEditorForm
         Caption = '...'
         OnClick = Button9Click
         ParentShowHint = False
+        PopupMenu = PopupMenu1
         ShowHint = True
         TabOrder = 1
       end
@@ -671,6 +672,9 @@ object ContestEditorForm: TContestEditorForm
       Caption = 'Tập tin'
       object MenuItem2: TMenuItem
         Action = actOpenFile
+      end
+      object MenuItem25: TMenuItem
+        Caption = 'Các file gần đây'
       end
       object MenuItem3: TMenuItem
         Action = actSaveFile
@@ -1066,5 +1070,13 @@ object ContestEditorForm: TContestEditorForm
       FF00FFFFFF00927777FFE2E0E0FFAD9999FFB0B0B0FF2D2D2DFF2D2D2DFFCACA
       CAFFA08888FFFFFFFFFF2D2D2DFF
     }
+  end
+  object PopupMenu1: TPopupMenu
+    left = 264
+    top = 328
+    object MenuItem26: TMenuItem
+      Caption = 'Open directory'
+      OnClick = MenuItem26Click
+    end
   end
 end

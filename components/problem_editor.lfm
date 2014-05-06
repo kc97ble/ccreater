@@ -17,9 +17,9 @@ object ProblemEditor: TProblemEditor
     Height = 306
     Top = 5
     Width = 480
-    ActivePage = TabSheet3
+    ActivePage = TabSheet2
     Align = alClient
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     object TabSheet2: TTabSheet
       Caption = 'Tổng quan'
@@ -181,6 +181,116 @@ object ProblemEditor: TProblemEditor
           Align = alLeft
           TabOrder = 0
         end
+        object Button3: TButton
+          Left = 150
+          Height = 32
+          Top = 0
+          Width = 75
+          Action = addByFilter1
+          Align = alLeft
+          TabOrder = 2
+        end
+      end
+    end
+    object TabSheet7: TTabSheet
+      Caption = 'Luồng vào ra'
+      ChildSizing.TopBottomSpacing = 5
+      ChildSizing.VerticalSpacing = 5
+      ClientHeight = 274
+      ClientWidth = 476
+      object OutputStreamEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 113
+        Width = 476
+        Align = alTop
+        TabOrder = 0
+        Text = 'OutputStreamEdit'
+      end
+      object Label2: TLabel
+        Left = 0
+        Height = 18
+        Top = 90
+        Width = 476
+        Align = alTop
+        Caption = 'Luồng ra'
+        ParentColor = False
+      end
+      object InputStreamEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 57
+        Width = 476
+        Align = alTop
+        TabOrder = 1
+        Text = 'InputStreamEdit'
+      end
+      object Label1: TLabel
+        Left = 0
+        Height = 18
+        Top = 34
+        Width = 476
+        Align = alTop
+        Caption = 'Luồng vào'
+        ParentColor = False
+      end
+      object StandardStreamCheck: TCheckBox
+        Left = 0
+        Height = 24
+        Top = 5
+        Width = 476
+        Align = alTop
+        Caption = 'Dùng luồng vào ra chuẩn'
+        OnChange = NameEditChange
+        TabOrder = 2
+      end
+    end
+    object TabSheet8: TTabSheet
+      Caption = 'Công khai'
+      ChildSizing.TopBottomSpacing = 5
+      ChildSizing.VerticalSpacing = 5
+      ClientHeight = 274
+      ClientWidth = 476
+      object PublicTestCaseEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 92
+        Width = 476
+        Align = alTop
+        TabOrder = 0
+        Text = 'PublicTestCaseEdit'
+      end
+      object RadioButton3: TRadioButton
+        Left = 0
+        Height = 24
+        Top = 63
+        Width = 476
+        Align = alTop
+        Caption = 'Dùng danh sách chỉ số'
+        OnChange = NameEditChange
+        TabOrder = 1
+      end
+      object RadioButton2: TRadioButton
+        Left = 0
+        Height = 24
+        Top = 34
+        Width = 476
+        Align = alTop
+        Caption = 'Ẩn hết'
+        OnChange = NameEditChange
+        TabOrder = 2
+      end
+      object RadioButton1: TRadioButton
+        Left = 0
+        Height = 24
+        Top = 5
+        Width = 476
+        Align = alTop
+        Caption = 'Nhìn thấy hết'
+        Checked = True
+        OnChange = NameEditChange
+        TabOrder = 3
+        TabStop = True
       end
     end
     object TabSheet3: TTabSheet
@@ -189,15 +299,41 @@ object ProblemEditor: TProblemEditor
       ChildSizing.VerticalSpacing = 5
       ClientHeight = 274
       ClientWidth = 476
-      object LimitLabel: TLabel
+      object SubtaskListButton: TButton
+        AnchorSideTop.Control = SubtaskListLabel
+        AnchorSideRight.Control = SubtaskListLabel
+        AnchorSideRight.Side = asrBottom
+        Left = 326
+        Height = 32
+        Top = 69
+        Width = 150
+        Action = actEditSubtask
+        Anchors = [akTop, akRight]
+        TabOrder = 0
+      end
+      object SubtaskListLabel: TLabel
         Left = 0
         Height = 18
-        Top = 5
+        Top = 69
         Width = 476
         Align = alTop
         BorderSpacing.Bottom = 14
-        Caption = 'LimitLabel'
+        Caption = 'SubtaskListLabel'
         ParentColor = False
+      end
+      object TokenButton: TButton
+        AnchorSideTop.Control = TokenLabel
+        AnchorSideRight.Control = TokenLabel
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TokenLabel
+        AnchorSideBottom.Side = asrBottom
+        Left = 326
+        Height = 32
+        Top = 37
+        Width = 150
+        Action = actEditToken
+        Anchors = [akTop, akRight]
+        TabOrder = 1
       end
       object TokenLabel: TLabel
         Left = 0
@@ -219,145 +355,50 @@ object ProblemEditor: TProblemEditor
         Width = 150
         Action = actEditLimit
         Anchors = [akTop, akRight]
-        TabOrder = 0
-      end
-      object TokenButton: TButton
-        AnchorSideTop.Control = TokenLabel
-        AnchorSideRight.Control = TokenLabel
-        AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = TokenLabel
-        AnchorSideBottom.Side = asrBottom
-        Left = 326
-        Height = 32
-        Top = 37
-        Width = 150
-        Action = actEditToken
-        Anchors = [akTop, akRight]
-        TabOrder = 1
-      end
-      object GroupBox1: TGroupBox
-        Left = 222
-        Height = 168
-        Top = 101
-        Width = 254
-        Align = alClient
-        Caption = 'Danh sách test được công khai'
-        ChildSizing.TopBottomSpacing = 5
-        ChildSizing.VerticalSpacing = 5
-        ClientHeight = 148
-        ClientWidth = 250
         TabOrder = 2
-        object RadioButton1: TRadioButton
-          Left = 0
-          Height = 24
-          Top = 5
-          Width = 250
-          Align = alTop
-          Caption = 'Nhìn thấy hết'
-          Checked = True
-          OnChange = NameEditChange
-          TabOrder = 0
-          TabStop = True
-        end
-        object RadioButton2: TRadioButton
-          Left = 0
-          Height = 24
-          Top = 34
-          Width = 250
-          Align = alTop
-          Caption = 'Ẩn hết'
-          OnChange = NameEditChange
-          TabOrder = 1
-        end
-        object RadioButton3: TRadioButton
-          Left = 0
-          Height = 24
-          Top = 63
-          Width = 250
-          Align = alTop
-          Caption = 'Dùng danh sách chỉ số'
-          OnChange = NameEditChange
-          TabOrder = 2
-        end
-        object PublicTestCaseEdit: TEdit
-          Left = 0
-          Height = 28
-          Top = 92
-          Width = 250
-          Align = alTop
-          TabOrder = 3
-          Text = 'PublicTestCaseEdit'
-        end
       end
-      object GroupBox2: TGroupBox
-        Left = 0
-        Height = 168
-        Top = 101
-        Width = 217
-        Align = alLeft
-        Anchors = [akTop, akLeft, akRight, akBottom]
-        Caption = 'Quy định luồng vào ra'
-        ChildSizing.TopBottomSpacing = 5
-        ChildSizing.VerticalSpacing = 5
-        ClientHeight = 148
-        ClientWidth = 213
-        TabOrder = 3
-        object OutputStreamEdit: TEdit
-          Left = 0
-          Height = 28
-          Top = 67
-          Width = 213
-          Align = alTop
-          TabOrder = 0
-          Text = 'OutputStreamEdit'
-        end
-        object InputStreamEdit: TEdit
-          Left = 0
-          Height = 28
-          Top = 34
-          Width = 213
-          Align = alTop
-          TabOrder = 1
-          Text = 'InputStreamEdit'
-        end
-        object StandardStreamCheck: TCheckBox
-          Left = 0
-          Height = 24
-          Top = 5
-          Width = 213
-          Align = alTop
-          Caption = 'Dùng luồng vào ra chuẩn'
-          OnChange = NameEditChange
-          TabOrder = 2
-        end
-      end
-      object Splitter1: TSplitter
-        Left = 217
-        Height = 168
-        Top = 101
-        Width = 5
-      end
-      object SubtaskListLabel: TLabel
+      object LimitLabel: TLabel
         Left = 0
         Height = 18
-        Top = 69
+        Top = 5
         Width = 476
         Align = alTop
         BorderSpacing.Bottom = 14
-        Caption = 'SubtaskListLabel'
+        Caption = 'LimitLabel'
         ParentColor = False
       end
-      object SubtaskListButton: TButton
-        AnchorSideTop.Control = SubtaskListLabel
-        AnchorSideRight.Control = SubtaskListLabel
+      object CheckerLabel: TLabel
+        Left = 0
+        Height = 18
+        Top = 101
+        Width = 476
+        Align = alTop
+        Caption = 'Trình chấm'
+        ParentColor = False
+      end
+      object CheckerEdit: TEdit
+        Left = 0
+        Height = 28
+        Top = 124
+        Width = 476
+        Align = alTop
+        TabOrder = 3
+        Text = 'CheckerEdit'
+      end
+      object CheckerButton: TButton
+        AnchorSideTop.Control = CheckerEdit
+        AnchorSideRight.Control = CheckerEdit
         AnchorSideRight.Side = asrBottom
-        Left = 326
-        Height = 32
-        Top = 69
-        Width = 150
-        Action = actEditSubtask
-        Anchors = [akTop, akRight]
-        TabOrder = 5
+        AnchorSideBottom.Control = CheckerEdit
+        AnchorSideBottom.Side = asrBottom
+        Left = 454
+        Height = 28
+        Top = 124
+        Width = 22
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = '...'
+        OnClick = CheckerButtonClick
+        TabOrder = 4
       end
     end
   end
@@ -399,6 +440,10 @@ object ProblemEditor: TProblemEditor
     object actEditSubtask: TAction
       Caption = 'Cài đặt subtask...'
       OnExecute = actEditSubtaskExecute
+    end
+    object addByFilter1: TAction
+      Caption = 'Thêm 1'
+      OnExecute = addByFilter1Execute
     end
   end
 end

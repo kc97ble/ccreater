@@ -54,21 +54,85 @@ msgstr ", %d giây một lần nộp"
 msgid ", %d giây một lần test"
 msgstr ", %d giây một lần test"
 
+#: limit_database.rsfilenotfound
+msgid "File not found: %s"
+msgstr "Không tìm thấy file: %s"
+
 #: limit_database.rsgiihn
 msgid "Giới hạn%s"
 msgstr "Giới hạn%s"
+
+#: limit_database.rsinputlistand
+msgid "Input list and output list has different size"
+msgstr "Số input và số output phải giống nhau"
+
+#: limit_database.rsinputlistsho
+msgid "Input list should not be empty"
+msgstr "Số test phải khác không"
 
 #: limit_database.rskhngcgiihnnp
 msgid "Không có giới hạn nộp bài"
 msgstr "Không có giới hạn nộp bài"
 
+#: limit_database.rslimitationer
+msgid "Limitation error"
+msgstr "Có lỗi trong cài đặt giới hạn"
+
+#: limit_database.rslimits
+msgid "Limit: \"%s\""
+msgstr "Giới hạn: \"%s\""
+
+#: limit_database.rsmaxsubmissio
+msgid "Max submission must be positive"
+msgstr "Số lần nộp phải dương"
+
+#: limit_database.rsmaxusertestm
+msgid "Max user test must be positive"
+msgstr "Số lần test phải dương"
+
+#: limit_database.rsmemorylimits
+msgid "Memory limit should be stricly positive"
+msgstr "Giới hạn bộ nhớ phải là số dương"
+
+#: limit_database.rsminsubmissio
+msgid "Min submission interval must be positive"
+msgstr "Khoảng cách giữa mỗi lần nộp phải dương"
+
+#: limit_database.rsminusertesti
+msgid "Min user test interval must be positive"
+msgstr "Khoảng cách giữa mỗi lần test phải dương"
+
 #: limit_database.rsnpdln
 msgid ", nộp %d lần"
 msgstr ", nộp %d lần"
 
+#: limit_database.rsproblemnames
+msgid "Problem name should be a valid identifier"
+msgstr "Tên bài tập phải là một định danh"
+
+#: limit_database.rsproblemss
+msgid "Problem \"%s\": \"%s\""
+msgstr "Bài \"%s\": \"%s\""
+
+#: limit_database.rsstatementfil
+msgid "Statement file not found"
+msgstr "Không thấy đề bài"
+
+#: limit_database.rssubtaskliste
+msgid "Subtask list error"
+msgstr "Có lỗi trong cài đặt subtask"
+
 #: limit_database.rstestdln
 msgid ", test %d lần"
 msgstr ", test %d lần"
+
+#: limit_database.rstimelimitsho
+msgid "Time limit should be strictly positive"
+msgstr "Thời gian chạy phải dương"
+
+#: limit_database.rstokenerror
+msgid "Token error"
+msgstr "Lỗi trong cài đặt token"
 
 #: limit_editor.rskhngcgiihn
 msgid "Không có giới hạn"
@@ -95,8 +159,14 @@ msgid "Bạn muốn xoá hết các user?"
 msgstr "Bạn muốn xoá hết các user?"
 
 #: mainform.rsccreaterv000
-msgid "CCreater v0.000000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
+#, fuzzy
+#| msgid "CCreater v0.000000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung KiênCCreater v0.00000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung KiênCCreater v0.00000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung KiênCCreater v0.00000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
+msgid "CCreater v0.00000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
 msgstr "CCreater v0.000000|Phần mềm tạo kì thi cho CMS|Người đóng góp|Nguyễn Tiến Trung Kiên"
+
+#: mainform.rsccreaterv0002
+msgid "CCreater v0.00000 - %s (%s)"
+msgstr "CCreater v0.00000 - %s (%s)"
 
 #: mainform.rsfilehaschang
 msgid "File has changed. Save?"
@@ -118,9 +188,65 @@ msgstr "Phát hiện lỗi trong kì thi"
 msgid "Xuất kì thi thành công"
 msgstr "Xuất kì thi thành công"
 
+#: properties_editor.rsnametitletim
+msgid "#,Name,Title,\"Time limit\",\"Mem limit\",\"Statement file\",\"Input stream\",\"Output stream\",\"Public testcase\""
+msgstr "\"#\", \"Tên\", \"Tên đầy đủ\", \"Thời gian\", \"Bộ nhớ\", \"Đề bài\", \"Luồng vào\", \"Luồng ra\", \"Test công khai\""
+
+#: subtask_database.defaultstatementfile
+msgid "languages/almost_blank_page.pdf"
+msgstr ""
+
+#: subtask_database.rslengthofsubt
+msgid "Length of subtask intervals must be positive"
+msgstr "Mỗi subtask phải là một khoảng có độ dài dương"
+
+#: subtask_database.rssometestnota
+msgid "Some test not appeared"
+msgstr "Một vài test chưa xuất hiện"
+
+#: subtask_database.rssubtaskinter
+msgid "Subtask intervals must be continuous"
+msgstr "Các subtask phải liên tục"
+
+#: subtask_database.rssubtaskintro
+msgid "Subtask introduction"
+msgstr ""
+
+#: subtask_database.rssubtasklists
+msgid "Subtask list: \"%s\""
+msgstr "Subtask: \"%s\""
+
+#: subtask_database.rssubtaskmoded
+msgid "Subtask mode disabled"
+msgstr "Subtask đã tắt"
+
+#: subtask_database.rssubtaskmodee
+msgid "Subtask mode enabled"
+msgstr "Subtask đã bật"
+
+#: subtask_database.rssumscoreofsu
+msgid "Sum score of subtasks must be exactly 100.0"
+msgstr "Tổng điểm các subtask phải bằng 100.0"
+
+#: subtask_editor.rssubtaskmodei
+msgid "Subtask mode is enabled"
+msgstr "Subtask đã bật"
+
+#: subtask_editor.rssubtaskmodei2
+msgid "Subtask mode is disabled"
+msgstr "Subtask đã tắt"
+
 #: taddproblemform.actinvalidate.caption
 msgctxt "taddproblemform.actinvalidate.caption"
 msgid "actInvalidate"
+msgstr ""
+
+#: taddproblemform.actpowerfulload.caption
+msgid "actPowerfulLoad"
+msgstr ""
+
+#: taddproblemform.actpowerfulload.hint
+msgid "Dùng bộ lọc mạnh nhất"
 msgstr ""
 
 #: taddproblemform.actregexload.caption
@@ -168,6 +294,7 @@ msgid "Nạp test"
 msgstr "Nạp test"
 
 #: taddproblemform.groupbox1ofaddproblem.caption
+msgctxt "taddproblemform.groupbox1ofaddproblem.caption"
 msgid "Danh sách input và output"
 msgstr "Danh sách input và output"
 
@@ -349,6 +476,7 @@ msgid "..."
 msgstr "..."
 
 #: tcontesteditorform.button9.hint
+msgctxt "tcontesteditorform.button9.hint"
 msgid "Chọn thư mục"
 msgstr "Chọn thư mục"
 
@@ -409,6 +537,14 @@ msgstr "-"
 msgctxt "tcontesteditorform.menuitem22.caption"
 msgid "-"
 msgstr "-"
+
+#: tcontesteditorform.menuitem25.caption
+msgid "Các file gần đây"
+msgstr "Các file gần đây"
+
+#: tcontesteditorform.menuitem26.caption
+msgid "Open directory"
+msgstr ""
 
 #: tcontesteditorform.menuitem5.caption
 msgid "Bài tập"
@@ -738,7 +874,7 @@ msgstr "Cài đặt giới hạn..."
 
 #: tproblemeditor.acteditsubtask.caption
 msgid "Cài đặt subtask..."
-msgstr ""
+msgstr "Cài đặt subtask..."
 
 #: tproblemeditor.actedittoken.caption
 msgctxt "tproblemeditor.actedittoken.caption"
@@ -750,24 +886,39 @@ msgctxt "tproblemeditor.actrem.caption"
 msgid "Xoá"
 msgstr "Xoá"
 
+#: tproblemeditor.addbyfilter1.caption
+msgid "Thêm 1"
+msgstr ""
+
 #: tproblemeditor.caption
 msgid "ProblemEditor"
 msgstr ""
 
-#: tproblemeditor.groupbox1.caption
-msgctxt "tproblemeditor.groupbox1.caption"
-msgid "Danh sách test được công khai"
-msgstr "Danh sách test được công khai"
+#: tproblemeditor.checkerbutton.caption
+msgctxt "tproblemeditor.checkerbutton.caption"
+msgid "..."
+msgstr "..."
 
-#: tproblemeditor.groupbox2.caption
-msgctxt "tproblemeditor.groupbox2.caption"
-msgid "Quy định luồng vào ra"
-msgstr "Quy định luồng vào ra"
+#: tproblemeditor.checkeredit.text
+msgid "CheckerEdit"
+msgstr ""
+
+#: tproblemeditor.checkerlabel.caption
+msgid "Trình chấm"
+msgstr "Trình chấm"
 
 #: tproblemeditor.inputstreamedit.text
 msgctxt "tproblemeditor.inputstreamedit.text"
 msgid "InputStreamEdit"
 msgstr ""
+
+#: tproblemeditor.label1.caption
+msgid "Luồng vào"
+msgstr "Luồng vào"
+
+#: tproblemeditor.label2.caption
+msgid "Luồng ra"
+msgstr "Luồng ra"
 
 #: tproblemeditor.limitlabel.caption
 msgid "LimitLabel"
@@ -852,6 +1003,14 @@ msgctxt "tproblemeditor.tabsheet3.caption"
 msgid "Nâng cao"
 msgstr "Nâng cao"
 
+#: tproblemeditor.tabsheet7.caption
+msgid "Luồng vào ra"
+msgstr "Luồng vào ra"
+
+#: tproblemeditor.tabsheet8.caption
+msgid "Công khai"
+msgstr "Công khai"
+
 #: tproblemeditor.timelabel.caption
 msgctxt "tproblemeditor.timelabel.caption"
 msgid "Thời gian chạy"
@@ -909,6 +1068,83 @@ msgstr ""
 
 #: tsubtaskeditor.subtaskenabledcheck.caption
 msgid "Dùng subtask"
+msgstr "Dùng subtask"
+
+#: ttestfilter1.addasinput.caption
+msgid "Thêm input"
+msgstr ""
+
+#: ttestfilter1.addasinput.hint
+msgid "Thêm vùng chọn vào danh sách input"
+msgstr ""
+
+#: ttestfilter1.addasoutput.caption
+msgid "Thêm output"
+msgstr ""
+
+#: ttestfilter1.addasoutput.hint
+msgid "Thêm vùng chọn vào danh sách output"
+msgstr ""
+
+#: ttestfilter1.caption
+msgid "TestFilter1"
+msgstr ""
+
+#: ttestfilter1.groupbox1.caption
+msgctxt "ttestfilter1.groupbox1.caption"
+msgid "Chọn thư mục"
+msgstr "Chọn thư mục"
+
+#: ttestfilter1.label1.caption
+msgid "Độ sâu tối đa"
+msgstr ""
+
+#: ttestfilter1.movitemsdown.caption
+msgid "Xuống"
+msgstr ""
+
+#: ttestfilter1.movitemsdown.hint
+msgid "Di chuyển cùng chọn xuống dưới"
+msgstr ""
+
+#: ttestfilter1.movitemsup.caption
+msgid "Lên"
+msgstr ""
+
+#: ttestfilter1.movitemsup.hint
+msgid "Di chuyển vùng chọn lên trên"
+msgstr ""
+
+#: ttestfilter1.panel2.caption
+msgctxt "ttestfilter1.panel2.caption"
+msgid "Danh sách input và output"
+msgstr "Danh sách input và output"
+
+#: ttestfilter1.remallitems.caption
+msgctxt "ttestfilter1.remallitems.caption"
+msgid "Xoá hết"
+msgstr "Xoá hết"
+
+#: ttestfilter1.remallitems.hint
+msgid "Xoá hết danh sách"
+msgstr ""
+
+#: ttestfilter1.remselecteditem.caption
+msgctxt "ttestfilter1.remselecteditem.caption"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: ttestfilter1.remselecteditem.hint
+msgid "Xoá vùng chọn trong danh sách"
+msgstr ""
+
+#: ttestfilter1.remselectednode.caption
+msgctxt "ttestfilter1.remselectednode.caption"
+msgid "Xoá"
+msgstr "Xoá"
+
+#: ttestfilter1.remselectednode.hint
+msgid "Xoá vùng chọn"
 msgstr ""
 
 #: ttimeeditor.button1.caption

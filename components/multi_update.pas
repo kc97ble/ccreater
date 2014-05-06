@@ -41,6 +41,8 @@ procedure WriteStrings(List: TIniFile; Section: String; Key: array of String;
                           const Value: array of TStrings);
 procedure ReadStrings(List: TIniFile; Section: String; Key: array of String;
                           Value: array of TStrings; DefaultValue: String);
+procedure WriteStrings2(List: TIniFile; Section: String; Key: String; Value: TStrings);
+procedure ReadStrings2(List: TIniFile; Section: String; Key: String; Value: TStrings);
 
 // Yaml Strings and ordinary types
 procedure YamlWriteIntegerIf(List: TStrings; FirstIndent, SecondIndent: String;
@@ -231,6 +233,26 @@ var i: Integer;
 begin
   for i := Low(Key) to High(Key) do
   Value[i].CommaText := List.ReadString(Section, Key[i], DefaultValue);
+end;
+
+procedure WriteStrings2(List: TIniFile; Section: String; Key: String;
+  Value: TStrings);
+var i: Integer;
+begin
+  List.WriteInteger(Section, Key+'.Count', Value.Count);
+  for i := 0 to Value.Count-1 do
+  List.WriteString(Section, Key+'.'+IntToStr(i), Value[i]);
+end;
+
+procedure ReadStrings2(List: TIniFile; Section: String; Key: String;
+  Value: TStrings);
+var i: Integer;
+begin
+  i := List.ReadInteger(Section, Key+'.Count', 0);
+  while Value.Count < i do Value.Add('');
+  while Value.Count > i do Value.Delete(Value.Count-1);
+  for i := 0 to Value.Count-1 do
+  Value[i] := List.ReadString(Section, Key+'.'+IntToStr(i), '');
 end;
 
 procedure YamlWriteIntegerIf(List: TStrings; FirstIndent, SecondIndent: String;

@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
   StdCtrls, ExtCtrls, ComCtrls, ActnList, ButtonPanel, RegExpr,
-  utils, regex_option_form, test_filter;
+  utils, regex_option_form, test_filter, test_filter_1;
 
 type
 
@@ -15,6 +15,7 @@ type
 
   TAddProblemForm = class(TForm)
     actInvalidate: TAction;
+    actPowerfulLoad: TAction;
     actSortNumber: TAction;
     actSortSize: TAction;
     actSortAlphabet: TAction;
@@ -35,7 +36,9 @@ type
     ToolButton3: TToolButton;
     ToolButton4: TToolButton;
     ToolButton5: TToolButton;
+    ToolButton6: TToolButton;
     procedure actInvalidateExecute(Sender: TObject);
+    procedure actPowerfulLoadExecute(Sender: TObject);
     procedure actSimpleLoadExecute(Sender: TObject);
     procedure actRegexLoadExecute(Sender: TObject);
     procedure Action3Execute(Sender: TObject);
@@ -124,6 +127,17 @@ begin
   for s in Outputs do
   ListBox2.Items.Add(ExtractRelativepath(SearchDir, s));
   Application.ProcessMessages;
+end;
+
+procedure TAddProblemForm.actPowerfulLoadExecute(Sender: TObject);
+begin
+  with TTestFilter1.Create(nil) do
+  try
+    Root:=SearchDir;
+    if Execute(Inputs, Outputs) = mrOK then
+    actInvalidate.Execute;
+    finally Free;
+  end;
 end;
 
 procedure TAddProblemForm.actRegexLoadExecute(Sender: TObject);

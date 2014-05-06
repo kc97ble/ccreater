@@ -17,7 +17,7 @@ type
   { TProblem }
 
   TProblem = class (IBasicDatabase)
-    Name, Title, StatementFile: String;
+    Name, Title, StatementFile, Checker: String;
     MemLimit, TimeLimit: Integer;
     InputList, OutputList: TStringList; //
     InputStreamFile, OutputStreamFile, PublicTestCase: String;
@@ -48,22 +48,25 @@ var ErrorCount: Integer = 0;
   procedure ErrorIf(B: Boolean; S: String);
   begin
     if B then ErrorCount += 1 else exit;
-    if S<>'' then Message.Add(Format('Problem "%s": "%s"', [Name, S]));
+    if S<>'' then Message.Add(Format(rsProblemSS, [Name, S]));
   end;
 
 var
   S: String;
 begin
-  ErrorIf(not IsValidIdent(Name), 'Problem name should be a valid identifier');
-  ErrorIf(TimeLimit<=0, 'Time limit should be strictly positive');
-  ErrorIf(MemLimit<=0, 'Memory limit should be stricly positive');
-  ErrorIf(not FileExists(StatementFile), 'Statement file not found');
-  ErrorIf(InputList.Count <> OutputList.Count, 'Input list and output list has different size');
-  ErrorIf(InputList.Count=0, 'Input list should not be empty');
+  ErrorIf(not IsValidIdent(Name), rsProblemNameS);
+  ErrorIf(TimeLimit<=0, rsTimeLimitSho);
+  ErrorIf(MemLimit<=0, rsMemoryLimitS);
+  ErrorIf(not FileExists(StatementFile) and not FileExists(DefaultStatementFile), rsStatementFil);
+  ErrorIf(InputList.Count <> OutputList.Count, rsInputListAnd);
+  ErrorIf(InputList.Count=0, rsInputListSho);
   for S in InputList do
-    ErrorIf(not FileExists(S), 'File not found: '+S);
+    ErrorIf(not FileExists(S), Format(rsFileNotFound, [S]));
   for S in OutputList do
-    ErrorIf(not FileExists(S), 'File not found: '+S);
+    ErrorIf(not FileExists(S), Format(rsFileNotFound, [S]));
+  ErrorIf(not Token.IsValid(Message), rsTokenError);
+  ErrorIf(not Limit.IsValid(Message), rsLimitationEr);
+  ErrorIf(not SubtaskList.IsValid(Message), rsSubtaskListE);
   Result := ErrorCount=0;
 end;
 
@@ -76,16 +79,11 @@ begin
 end;
 
 function TProblem.Execute(Dir: String; Message: TStrings): Boolean;
-
-  procedure Step(B: Boolean=true);
-  begin
-    if Assigned(OnStep) then
-    OnStep(Self);
-  end;
-
 var
   List: TStrings;
   i: Integer;
+procedure Step(B: Boolean=true);
+  begin if Assigned(OnStep) then OnStep(Self); end;
 begin
   Result := True;
   List := TStringList.Create;
@@ -98,7 +96,18 @@ begin
     ForceDirectories(Dir**Name**'testo');
     ForceDirectories(Dir**Name**'input');
     ForceDirectories(Dir**Name**'output');
-    Step(CopyFile(StatementFile, Dir**Name**'testo'**'testo.pdf'));
+    if StatementFile='' then
+      Step(CopyFile(DefaultStatementFile, Dir**Name**'testo'**'testo.pdf'))
+    else
+      Step(CopyFile(StatementFile, Dir**Name**'testo'**'testo.pdf'));
+    if Checker<>'' then begin
+      ForceDirectory(Dir**Name**'cor');
+      CopyFile(Checker, Dir**Name**'cor'**'correttore');
+    end else begin
+      DeleteFile(Dir**Name**'cor'**'correttore');
+      RemoveDir(Dir**Name**'cor');
+    end;
+
     for i := 0 to InputList.Count-1 do
     Step(CopyFile(InputList[i], Dir**Name**'input'**('input'+IntToStr(i)+'.txt')));
     for i := 0 to OutputList.Count-1 do
@@ -114,8 +123,8 @@ end;
 procedure TProblem.SaveToStream(List: TIniFile; const Section: String);
 begin
   WriteString(List, Section,
-    ['Name', 'Title', 'StatementFile','InputStreamFile','OutputStreamFile','PublicTestCase'],
-    [Name, Title, StatementFile, InputStreamFile, OutputStreamFile, PublicTestCase]);
+    ['Name', 'Title', 'StatementFile','InputStreamFile','OutputStreamFile', 'PublicTestCase', 'Checker'],
+    [Name, Title, StatementFile, InputStreamFile, OutputStreamFile, PublicTestCase, Checker]);
   WriteInteger(List, Section,
     ['MemLimit', 'TimeLimit'],
     [MemLimit, TimeLimit]);
@@ -130,8 +139,8 @@ end;
 procedure TProblem.LoadFromStream(List: TIniFile; const Section: String);
 begin
   ReadString(List, Section,
-    ['Name', 'Title', 'StatementFile','InputStreamFile','OutputStreamFile','PublicTestCase'],
-    [@Name, @Title, @StatementFile, @InputStreamFile, @OutputStreamFile, @PublicTestCase], '');
+    ['Name', 'Title', 'StatementFile','InputStreamFile','OutputStreamFile','PublicTestCase', 'Checker'],
+    [@Name, @Title, @StatementFile, @InputStreamFile, @OutputStreamFile, @PublicTestCase, @Checker], '');
   ReadInteger(List, Section,
     ['MemLimit', 'TimeLimit'],
     [@MemLimit, @TimeLimit], 0);

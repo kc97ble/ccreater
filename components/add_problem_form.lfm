@@ -1,7 +1,7 @@
 object AddProblemForm: TAddProblemForm
-  Left = 0
+  Left = 798
   Height = 360
-  Top = 410
+  Top = 386
   Width = 480
   Caption = 'Nạp test'
   ChildSizing.TopBottomSpacing = 5
@@ -95,23 +95,28 @@ object AddProblemForm: TAddProblemForm
       ShowHint = True
     end
     object ToolButton4: TToolButton
-      Left = 61
+      Left = 91
       Top = 2
       Action = actSortSize
       ParentShowHint = False
       ShowHint = True
     end
     object ToolButton5: TToolButton
-      Left = 91
+      Left = 121
       Top = 2
       Action = actSortAlphabet
       ParentShowHint = False
       ShowHint = True
     end
     object ToolButton3: TToolButton
-      Left = 121
+      Left = 151
       Top = 2
       Action = actSortNumber
+    end
+    object ToolButton6: TToolButton
+      Left = 61
+      Top = 2
+      Action = actPowerfulLoad
     end
   end
   object ButtonPanel1: TButtonPanel
@@ -608,6 +613,12 @@ object AddProblemForm: TAddProblemForm
       Hint = 'Sắp xếp theo phần số'
       ImageIndex = 5
       OnExecute = actSortNumberExecute
+    end
+    object actPowerfulLoad: TAction
+      Caption = 'actPowerfulLoad'
+      Hint = 'Dùng bộ lọc mạnh nhất'
+      ImageIndex = 2
+      OnExecute = actPowerfulLoadExecute
     end
   end
 end

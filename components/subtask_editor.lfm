@@ -18,14 +18,14 @@ object SubtaskEditor: TSubtaskEditor
     Align = alClient
     AutoFillColumns = True
     ColCount = 4
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAutoAddRows, goSmoothScroll]
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowMoving, goEditing, goAutoAddRows, goSmoothScroll, goFixedRowNumbering]
     TabOrder = 0
     TitleStyle = tsNative
     ColWidths = (
-      64
-      138
-      138
-      138
+      37
+      147
+      147
+      147
     )
     Cells = (
       4

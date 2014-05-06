@@ -6,9 +6,9 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  ExtCtrls, ActnList, Menus, StdActns, DefaultTranslator,
-  database, problem_editor, edit_user_form,
-  utils, token_editor, time_editor, limit_editor, multi_update, properties_editor;
+  ExtCtrls, ActnList, Menus, StdActns, DefaultTranslator, LCLIntf,
+  database, problem_editor, edit_user_form, utils, token_editor, time_editor,
+  limit_editor, multi_update, properties_editor, workspace_database;
 
 resourcestring
   rsXuTKThiThNhC = 'Xuất kì thi thành công';
@@ -18,9 +18,10 @@ resourcestring
   rsFileHasChang = 'File has changed. Save?';
   rsBNMuNXoHTCCB = 'Bạn muốn xoá hết các bài?';
   rsBNMuNXoHTCCU = 'Bạn muốn xoá hết các user?';
-  rsCCreaterV000 = 'CCreater v0.000000|Phần mềm tạo kì thi cho CMS|'
+  rsCCreaterV000 = 'CCreater v0.00000|Phần mềm tạo kì thi cho CMS|'
     +'Người đóng góp|Nguyễn Tiến Trung Kiên';
   CurrentLanguage = 'Some language';
+  rsCCreaterV0002 = 'CCreater v0.00000 - %s (%s)';
 
 type
 
@@ -38,6 +39,9 @@ type
     AddProblemButton, RemUserButton, RemProblemButton, EditProblemButton,
       AddUserButton, ClearProblemButton, ClearUserButton,
       Button7, Button8, Button9: TButton;
+      MenuItem26: TMenuItem;
+      PopupMenu1: TPopupMenu;
+      MenuItem25: TMenuItem;
       ProgressBar1: TProgressBar;
       EditAllProblemButton: TButton;
       Button1: TButton;
@@ -110,6 +114,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure Label2Click(Sender: TObject);
+    procedure MenuItem26Click(Sender: TObject); experimental;
     procedure PageControl1Change(Sender: TObject);
   private
     ControlsModified: Boolean;
@@ -123,6 +128,7 @@ type
     procedure InvalidateControls;
     procedure UpdateCaption;
     procedure UpdateControl(Sender: TObject);
+    procedure RecentFileItemClick(Sender: TObject);
   public
     procedure LoadControls;
     procedure SaveControls;
@@ -185,6 +191,7 @@ begin
   if FileName='' then
     Result := CanSaveAsFile
   else begin
+    SaveControls;
     SaveContestToFile(FileName, Contest);
     ControlsModified:=false;
     InvalidateControls;
@@ -264,18 +271,12 @@ begin
 end;
 
 procedure TContestEditorForm.actEditPropertiesExecute(Sender: TObject);
-var Form: TPropertiesEditor;
 begin
-  Form := TPropertiesEditor.Create(nil);
-  try
-    if Form.Execute(Contest) = mrOK then
-    begin
-      UpdateControl(ProblemListBox);
-      InvalidateControls;
-      ComponentChange(Sender);
-    end;
-  finally
-    Form.Free;
+  if TPropertiesEditor.DefaultExecute(Contest) = mrOK then
+  begin
+    UpdateControl(ProblemListBox);
+    InvalidateControls;
+    ComponentChange(Sender);
   end;
 end;
 
@@ -378,6 +379,7 @@ end;
 function TContestEditorForm.CanOpenFile: Boolean;
 var Dialog: TOpenDialog;
 begin
+  if not CanCloseFile then exit(False);
   Result := False;
   Dialog := TOpenDialog.Create(nil);
   LastDialogProperty.SaveToDialog(Dialog);
@@ -500,6 +502,8 @@ end;
 procedure TContestEditorForm.FormCreate(Sender: TObject);
 begin
   Contest:=TContest.Create;
+  Workspace.RecentFileList.OnClick:=@RecentFileItemClick;
+  Workspace.RecentFileList.RecentMenuItem := MenuItem25;
   LoadControls;
   ControlsModified:=False;
   UpdateCaption;
@@ -516,6 +520,11 @@ begin
     SetDefaultLang('en')
   else if CurrentLanguage='en' then
     SetDefaultLang('vi');
+end;
+
+procedure TContestEditorForm.MenuItem26Click(Sender: TObject);
+begin
+  if ExportDirEdit.Text <> '' then OpenDocument(ExportDirEdit.Text);
 end;
 
 procedure TContestEditorForm.PageControl1Change(Sender: TObject);
@@ -536,6 +545,18 @@ begin
     end
   else
     ShowMessage('UpdateControl ('+TComponent(Sender).Name+') not implemented');
+end;
+
+procedure TContestEditorForm.RecentFileItemClick(Sender: TObject);
+begin
+  if CanCloseFile then
+  begin
+    FileName:=TMenuItem(Sender).Caption;
+    LoadContestFromFile(FileName, Contest);
+    LoadControls;
+    ControlsModified:=False;
+    InvalidateControls;
+  end;
 end;
 
 procedure TContestEditorForm.InvalidateControls;
@@ -573,7 +594,7 @@ procedure TContestEditorForm.UpdateCaption;
   end;
 
 begin
-  Caption := Format('CCreater v0.000000 - %s (%s)',
+  Caption := Format(rsCCreaterV0002,
     [ifthen(ControlsModified, '*', '') + TitleEdit.Text, NameEdit.Text]);
 end;
 

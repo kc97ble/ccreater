@@ -8,6 +8,10 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids, Spin,
   EditBtn, StdCtrls, ButtonPanel, ExtCtrls, database, multi_update, utils;
 
+resourcestring
+  rsNameTitleTim = '#,Name,Title,"Time limit","Mem limit","Statement file","'
+    +'Input stream","Output stream","Public testcase"';
+
 type
 
   { TPropertiesEditor }
@@ -38,6 +42,7 @@ type
     function Execute(Contest: TContest): TModalResult;
     procedure LoadControls(Contest: TContest);
     procedure SaveControls(Contest: TContest);
+    class function DefaultExecute(Contest: TContest): TModalResult;
   end;
 
 implementation
@@ -172,12 +177,25 @@ begin
   end;
 end;
 
+class function TPropertiesEditor.DefaultExecute(Contest: TContest
+  ): TModalResult;
+var Form: TPropertiesEditor;
+begin
+  Form := TPropertiesEditor.Create(nil);
+  try
+    Result := Form.Execute(Contest);
+    finally Form.Free;
+  end;
+end;
+
 procedure TPropertiesEditor.FileNameEdit1EditingDone(Sender: TObject);
 begin
   if Sender is TCustomEdit then with StringGrid1 do
   Cells[Col, Row] := TCustomEdit(Sender).Text;
   if Sender is TCustomComboBox then with StringGrid1 do
   Cells[Col, Row] := TCustomComboBox(Sender).Text;
+  if Sender is TFileNameEdit then
+  LastDialogProperty.InitialDir:=TFileNameEdit(Sender).InitialDir;
 end;
 
 procedure TPropertiesEditor.FileNameEdit1AcceptFileName(Sender: TObject;
@@ -193,6 +211,7 @@ end;
 
 procedure TPropertiesEditor.FormCreate(Sender: TObject);
 begin
+  StringGrid1.Rows[0].CommaText:=rsNameTitleTim;
   ListBox1.Items.Assign(StringGrid1.Rows[0]);
 end;
 

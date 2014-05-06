@@ -14,6 +14,22 @@ resourcestring
   rsDGiYMTLNTest = ', %d giây một lần test';
   rsKhNgCGiIHNNP = 'Không có giới hạn nộp bài';
   rsGiIHN = 'Giới hạn%s';
+  rsProblemSS = 'Problem "%s": "%s"';
+  rsProblemNameS = 'Problem name should be a valid identifier';
+  rsTimeLimitSho = 'Time limit should be strictly positive';
+  rsMemoryLimitS = 'Memory limit should be stricly positive';
+  rsStatementFil = 'Statement file not found';
+  rsInputListAnd = 'Input list and output list has different size';
+  rsInputListSho = 'Input list should not be empty';
+  rsFileNotFound = 'File not found: %s';
+  rsTokenError = 'Token error';
+  rsLimitationEr = 'Limitation error';
+  rsSubtaskListE = 'Subtask list error';
+  rsMaxSubmissio = 'Max submission must be positive';
+  rsMaxUserTestM = 'Max user test must be positive';
+  rsMinSubmissio = 'Min submission interval must be positive';
+  rsMinUserTestI = 'Min user test interval must be positive';
+  rsLimitS = 'Limit: "%s"';
 
 type
 
@@ -65,8 +81,21 @@ begin
     [MSN, MUTN, MSI, MUTI]);
 end;
 function TLimit.IsValid(Message: TStrings): Boolean;
+var
+  ErrorCount: Integer=0;
+
+ procedure ErrorIf(B: Boolean; S: String);
+ begin
+   if B then ErrorCount += 1 else exit;
+   if S<>'' then Message.Add(Format(rsLimitS, [S]));
+ end;
+
 begin
-  Result := True;
+  if MSNSet then ErrorIf(MSN<=0, rsMaxSubmissio);
+  if MUTNSet then ErrorIf(MUTN<=0, rsMaxUserTestM);
+//  if MSISet then ErrorIf(MSI<=0, rsMinSubmissio);
+//  if MUTISet then ErrorIf(MUTI<=0, rsMinUserTestI);
+  Result := ErrorCount=0;
 end;
 
 function TLimit.Introduction: String;

@@ -6,7 +6,11 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids,
-  StdCtrls, ButtonPanel, subtask_database, multi_update;
+  StdCtrls, ButtonPanel, ExtCtrls, subtask_database, multi_update;
+
+resourcestring
+  rsSubtaskModeI = 'Subtask mode is enabled';
+  rsSubtaskModeI2 = 'Subtask mode is disabled';
 
 type
 
@@ -46,6 +50,7 @@ var
 begin
   WriteBool([SubtaskEnabledCheck], [SubtaskList.Enabled]);
   StringGrid1.RowCount := SubtaskList.Count + 1;
+  if StringGrid1.RowCount = 1 then StringGrid1.RowCount := 2;
   for i := 0 to SubtaskList.Count-1 do
   with SubtaskList[i], StringGrid1 do
   begin
@@ -60,6 +65,7 @@ var
   i: Integer;
 begin
   ReadBool([SubtaskEnabledCheck], [@SubtaskList.Enabled]);
+  with StringGrid1 do while Cells[1,RowCount-1]='' do RowCount:=RowCount-1;
   SubtaskList.Count := StringGrid1.RowCount - 1;
   for i := 0 to SubtaskList.Count-1 do
   with SubtaskList[i], StringGrid1 do
@@ -73,9 +79,9 @@ end;
 function TSubtaskEditor.Introduction: String;
 begin
   if SubtaskEnabledCheck.Checked then
-    Result := 'Subtask mode is enabled'
+    Result := rsSubtaskModeI
   else
-    Result := 'Subtask mode is disabled';
+    Result := rsSubtaskModeI2;
 end;
 
 class function TSubtaskEditor.DefaultExecute(Sender: TObject): TModalResult;
